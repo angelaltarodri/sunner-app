@@ -1,6 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { PlantInfo } from 'src/app/auth/interfaces/plantInfo.interface';
+import { PlantList } from 'src/app/auth/interfaces/plantList.interface';
 
 import { environment } from '../../../environments/environment';
 
@@ -15,7 +17,11 @@ export class PlantServiceService {
     private http: HttpClient,
   ){}
 
-  getPlantInfo(plantId: string){
+  getPlantsBasicInfo(): Observable<PlantList>{
+    return this.http.get<PlantList>(`${this.baseUrl}`)
+  }
+
+  getPlantInfo(plantId: string): Observable<PlantInfo>{
     return this.http.get<PlantInfo>(`${this.baseUrl}/${plantId}`)
   }
 

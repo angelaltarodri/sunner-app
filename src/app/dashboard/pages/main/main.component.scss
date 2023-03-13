@@ -1,0 +1,29 @@
+.main {
+  padding: 20px;
+  box-sizing: border-box;
+  color: white;
+  .main-container {
+    color: black;
+
+    display: flex;
+    align-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    @media (min-width: 576px) {
+      flex-direction: row;
+    }
+    .main-card {
+      background-color: white;
+      border: 1px solid black;
+      height: 150px;
+      width: 90vw;
+      text-align: center;
+      padding: 10px;
+      box-sizing: border-box;
+      @media (min-width: 576px) {
+        width: 40vw;
+      }
+    }
+  }
+}

@@ -1,9 +1,16 @@
-<div>
-  <h1>Ahorro monetario:</h1>
-  <h1>S/ {{ ahorroMonetario }}</h1>
+<div class="main">
+  <h2>
+    <i>¡Hola, {{ nombrePlanta }}!</i>
+  </h2>
+  <h2>Así vas con SUNNER:</h2>
+  <div class="main-container">
+    <div class="main-card">
+      <h3>Ahorro monetario:</h3>
+      <h2>S/ {{ ahorroMonetario | number : "1.2-2" }}</h2>
+    </div>
+    <div class="main-card">
+      <h3>Ahorro en emisiones:</h3>
+      <h2>{{ ahorroEmisionesKG | number : "1.2-2" }} kg de CO2.</h2>
+    </div>
+  </div>
 </div>
-<div>
-  <h1>Ahorro en emisiones:</h1>
-  <h1>{{ ahorroEmisionesKG }} kg de CO2.</h1>
-</div>
-<button (click)="showPlantInfo()">show</button>
