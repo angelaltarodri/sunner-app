@@ -31,8 +31,8 @@ export class MainComponent implements OnInit {
   get ahorroMonetario() {
     return this.energiaTotalConsumida*this.ahorroEnS;
   }
-  get ahorroEmisiones() {
-    return this.energiaTotalConsumida*this.ahorroCO2;
+  get ahorroEmisionesKG() {
+    return this.energiaTotalConsumida*this.ahorroCO2*1000;
   }
 
 }
