@@ -1,16 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
 import { PlantInfo } from 'src/app/auth/interfaces/plantInfo.interface';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { ahorroCO2, ahorroEnS } from '../../context/var';
-import { PlantServiceService } from '../../services/plant-service.service';
+import { PlantService } from '../../services/plant.service';
 
 @Component({
-  selector: 'app-main',
-  templateUrl: './main.component.html',
-  styleUrls: ['./main.component.scss']
+  selector: 'app-base',
+  templateUrl: './base.component.html',
+  styleUrls: ['./base.component.scss']
 })
-export class MainComponent implements OnInit {
+export class BaseComponent implements OnInit {
 
   energiaTotalConsumida:number = 0;
   ahorroCO2: number = ahorroCO2;
@@ -18,8 +19,9 @@ export class MainComponent implements OnInit {
   nombrePlanta: string = ''
 
   constructor(
-    private plantService: PlantServiceService,
-    private authService: AuthService
+    private plantService: PlantService,
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -32,15 +34,16 @@ export class MainComponent implements OnInit {
       });
   }
 
-  showPlantInfo () {
-    console.log(this.energiaTotalConsumida)
-  }
-
   get ahorroMonetario() {
     return this.energiaTotalConsumida*this.ahorroEnS;
   }
   get ahorroEmisionesKG() {
     return this.energiaTotalConsumida*this.ahorroCO2*1000;
+  }
+
+  logout() {
+    this.authService.logout();
+    this.router.navigate(['./']);
   }
 
 }

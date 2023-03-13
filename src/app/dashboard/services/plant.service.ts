@@ -9,7 +9,7 @@ import { environment } from '../../../environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class PlantServiceService {
+export class PlantService {
 
   private baseUrl: string = environment.baseUrl;
 

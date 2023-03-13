@@ -1,8 +1,14 @@
-.main {
+.base {
   padding: 20px;
   box-sizing: border-box;
   color: white;
-  .main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(../../../../assets/s1.png);
+  .base-container {
     color: black;
 
     display: flex;
@@ -13,7 +19,7 @@
     @media (min-width: 576px) {
       flex-direction: row;
     }
-    .main-card {
+    .base-card {
       background-color: white;
       border: 1px solid black;
       height: 150px;
@@ -25,5 +31,10 @@
         width: 40vw;
       }
     }
+  }
+  .logout{
+    width: 100px;
+    height: 30px;
+    margin-top: 20px;
   }
 }
