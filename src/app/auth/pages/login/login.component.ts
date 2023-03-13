@@ -30,11 +30,11 @@ export class LoginComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.miFormulario.reset({
-      username: '1626659',
-      password: '1626659',
-      password2: '1626659',
-    })
+    // this.miFormulario.reset({
+    //   username: '1626659',
+    //   password: '1626659',
+    //   password2: '1626659',
+    // })
   }
 
   login() {
