@@ -1,10 +1,36 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
+import { AuthGuard } from './auth/guards/auth.guard';
+import { ErrorPageComponent } from './shared/error-page/error-page.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+  // siempre se espera la declaracion del Modulo Principal del componente al final (AuthModule y HeroesModule)
+  {
+    path:'auth',
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+  },
+  {
+    path:'dashboard',
+    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+    canLoad: [AuthGuard],
+    canActivate: [AuthGuard]
+  },
+  {
+    path: '404',
+    component: ErrorPageComponent
+  },
+  {
+    path:'**',
+    redirectTo: 'auth'
+  }
+]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  imports: [
+    RouterModule.forRoot(routes)
+  ],
+  exports: [
+    RouterModule
+  ]
 })
 export class AppRoutingModule { }
