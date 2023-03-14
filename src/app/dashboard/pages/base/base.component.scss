@@ -1,13 +1,15 @@
 .base {
   padding: 20px;
   box-sizing: border-box;
-  color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-image: url(../../../../assets/s1.png);
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../../assets/s1.png);
+  background-size: cover;
+
   .base-container {
     color: black;
 
@@ -20,21 +22,59 @@
       flex-direction: row;
     }
     .base-card {
-      background-color: white;
-      border: 1px solid black;
-      height: 150px;
+      color: white;
+      border: 1px solid white;
+
       width: 90vw;
-      text-align: center;
-      padding: 10px;
+      max-width: 500px;
+      min-height: 400px;
+
+      display:flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+
+      padding: 20px;
       box-sizing: border-box;
-      @media (min-width: 576px) {
-        width: 40vw;
+
+      .message{
+        font-size: 25px;
+        text-align: start;
+        margin-bottom: 20px;
+      }
+
+      .card-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        width: 100%;
+        .item {
+          width: 45%;
+          text-align: start;
+          font-size: 20px;
+          margin-top: 20px;
+        }
       }
     }
   }
   .logout{
-    width: 100px;
-    height: 30px;
     margin-top: 20px;
+
+    height: 40px;
+    width: 80vw;
+    max-width: 280px;
+
+    background-color: white;
+    color: black;
+
+    border : 0;
+    border-radius: 8px;
+
+    letter-spacing: 3px;
+
+    &:hover {
+      background-color: rgb(96, 96, 192);
+      color: white;
+    }
   }
 }

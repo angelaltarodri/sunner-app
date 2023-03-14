@@ -1,16 +1,24 @@
 <div class="base">
-  <h2>
-    <i>¡Hola, {{ nombrePlanta }}!</i>
-  </h2>
-  <h2>Así vas con SUNNER:</h2>
   <div class="base-container">
     <div class="base-card">
-      <h3>Ahorro monetario:</h3>
-      <h2>S/ {{ ahorroMonetario | number : "1.2-2" }}</h2>
-    </div>
-    <div class="base-card">
-      <h3>Ahorro en emisiones:</h3>
-      <h2>{{ ahorroEmisionesKG | number : "1.2-2" }} kg de CO2.</h2>
+      <div class="message">
+        <b>¡Hola, {{ nombrePlanta }}!</b> <br />
+        Así vas con Sunner:
+      </div>
+      <div class="card-container">
+        <div class="item">
+          Energía total: <br />
+          <b>{{ energiaTotalConsumida | number : "1.2-2" }} KWH</b>
+        </div>
+        <div class="item">
+          Ahorro monetario: <br />
+          <b>S/ {{ ahorroMonetario | number : "1.2-2" }}</b>
+        </div>
+        <div class="item">
+          Ahorro en emisiones: <br />
+          <b>{{ ahorroEmisionesKG | number : "1.2-2" }} kg de CO2.</b>
+        </div>
+      </div>
     </div>
   </div>
   <button class="logout" (click)="logout()">logout</button>

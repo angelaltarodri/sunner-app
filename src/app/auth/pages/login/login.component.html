@@ -1,13 +1,5 @@
-<div
-  style="
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  "
->
-  <h2>SUNNER APP</h2>
+<div class="login">
+  <div class="title">SUNNER</div>
   <form
     action=""
     autocomplete="off"
@@ -16,51 +8,36 @@
   >
     <!-- Username -->
     <div>
-      <label for="">Username</label>
-      <div>
+      <label for="">Usuario</label>
+      <div class="input-body">
         <input
           type="text"
           placeholder="Nombre código del usuario"
           formControlName="username"
         />
-        <span *ngIf="campoNoValido('username')"
-          >El username debe ser de mínimo 7 caracteres y solo números del 1 al
-          9.</span
-        >
       </div>
     </div>
     <!-- Password -->
     <div>
-      <label for="">Password</label>
-      <div>
+      <label for="">Contraseña</label>
+      <div class="input-body">
         <input
           type="password"
           placeholder="Password código del usuario"
           formControlName="password"
         />
-        <span *ngIf="campoNoValido('password')"
-          >La contraseña no puede tener menos de 7 caracteres.</span
-        >
       </div>
     </div>
-    <!-- Password 2 -->
-    <div>
-      <label for="">Confirmar Password</label>
-      <div>
-        <input
-          type="password"
-          placeholder="Confirmar la contraseña"
-          formControlName="password2"
-        />
-        <span *ngIf="campoNoValido('password2')"
-          >Las contraseñas deben ser iguales.</span
-        >
-      </div>
-    </div>
-    <div>
-      <div>
-        <button type="submit" [disabled]="miFormulario.pending">Login</button>
-      </div>
+    <button type="submit" [disabled]="miFormulario.pending">INGRESAR</button>
+    <div class="errors">
+      <span *ngIf="campoNoValido('username')"
+        >El usuario debe ser de mínimo 7 caracteres y solo números del 1 al
+        9.</span
+      >
+      <span *ngIf="campoNoValido('password')"
+        >La contraseña no puede tener menos de 7 caracteres.</span
+      >
+      <span *ngIf="usuarioInvalido">El usuario ingresado no existe.</span>
     </div>
   </form>
 </div>

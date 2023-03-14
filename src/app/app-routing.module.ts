@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AuthGuard } from './auth/guards/auth.guard';
 import { ErrorPageComponent } from './shared/error-page/error-page.component';
+import { DashboardGuard } from './dashboard/guards/dashboard.guard';
 
 const routes: Routes = [
   // siempre se espera la declaracion del Modulo Principal del componente al final (AuthModule y HeroesModule)
   {
     path:'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule)
+    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    canLoad: [DashboardGuard],
+    canActivate: [DashboardGuard]
   },
   {
     path:'dashboard',
