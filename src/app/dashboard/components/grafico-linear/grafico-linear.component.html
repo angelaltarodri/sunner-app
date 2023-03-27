@@ -1,0 +1,18 @@
+<h1>Gráfica de Barras</h1>
+<hr />
+
+<div class="row">
+  <div class="col">
+    <div style="display: block; width: 400px">
+      <canvas
+        baseChart
+        [datasets]="barChartData"
+        [labels]="barChartLabels"
+        [options]="barChartOptions"
+        [legend]="barChartLegend"
+        [chartType]="barChartType"
+      >
+      </canvas>
+    </div>
+  </div>
+</div>

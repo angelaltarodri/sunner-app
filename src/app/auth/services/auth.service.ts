@@ -4,8 +4,8 @@ import { Observable, tap, of, map} from 'rxjs';
 import { environment } from '../../../environments/environment';
 
 import { Auth } from '../interfaces/auth.interface';
-import { PlantList } from '../interfaces/plantList.interface';
 import { switchMap } from 'rxjs/operators';
+import { PlantList } from '../../dashboard/interfaces/plantList.interface';
 
 @Injectable({
   providedIn: 'root'

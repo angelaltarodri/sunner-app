@@ -7,8 +7,8 @@
   align-items: center;
   height: 100vh;
 
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../../assets/s1.png);
-  background-size: cover;
+  // background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../../../../assets/s1.png);
+  // background-size: cover;
 
   .base-container {
     color: black;
@@ -22,8 +22,11 @@
       flex-direction: row;
     }
     .base-card {
-      color: white;
-      border: 1px solid white;
+      // color: white;
+      // border: 1px solid white;
+
+      color: black;
+      border: 1px solid black;
 
       width: 90vw;
       max-width: 500px;
@@ -66,6 +69,7 @@
 
     background-color: white;
     color: black;
+    border: 1px solid black;
 
     border : 0;
     border-radius: 8px;

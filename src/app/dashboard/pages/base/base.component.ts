@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable, tap } from 'rxjs';
-import { PlantInfo } from 'src/app/auth/interfaces/plantInfo.interface';
 import { AuthService } from 'src/app/auth/services/auth.service';
 import { ahorroCO2, ahorroEnS } from '../../context/var';
 import { PlantService } from '../../services/plant.service';
