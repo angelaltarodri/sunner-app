@@ -7,33 +7,30 @@ import { DashboardGuard } from './dashboard/guards/dashboard.guard';
 const routes: Routes = [
   // siempre se espera la declaracion del Modulo Principal del componente al final (AuthModule y HeroesModule)
   {
-    path:'auth',
-    loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule),
+    path: 'auth',
+    loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
     canLoad: [DashboardGuard],
-    canActivate: [DashboardGuard]
+    canActivate: [DashboardGuard],
   },
   {
-    path:'dashboard',
-    loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule),
+    path: 'dashboard',
+    loadChildren: () =>
+      import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
     canLoad: [AuthGuard],
-    canActivate: [AuthGuard]
+    canActivate: [AuthGuard],
   },
   {
     path: '404',
-    component: ErrorPageComponent
+    component: ErrorPageComponent,
   },
   {
-    path:'**',
-    redirectTo: 'auth'
-  }
-]
+    path: '**',
+    redirectTo: 'auth',
+  },
+];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes)
-  ],
-  exports: [
-    RouterModule
-  ]
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

@@ -8,14 +8,13 @@ import { PlantService } from '../../services/plant.service';
 @Component({
   selector: 'app-base',
   templateUrl: './base.component.html',
-  styleUrls: ['./base.component.scss']
+  styleUrls: ['./base.component.scss'],
 })
 export class BaseComponent implements OnInit {
-
-  energiaTotalConsumida:number = 0;
+  energiaTotalConsumida: number = 0;
   ahorroCO2: number = ahorroCO2;
   ahorroEnS: number = ahorroEnS;
-  nombrePlanta: string = ''
+  nombrePlanta: string = '';
 
   constructor(
     private plantService: PlantService,
@@ -25,24 +24,28 @@ export class BaseComponent implements OnInit {
 
   ngOnInit(): void {
     const token = localStorage.getItem('token');
-    this.plantService.getPlantInfo(token!)
-      .subscribe( res => this.energiaTotalConsumida = Number(res.totalEnergy));
-    this.plantService.getPlantsBasicInfo()
-      .subscribe( plantList => {
-        this.nombrePlanta = plantList.data.find(plant => plant.plantId === token)?.plantName!;
-      });
+    this.plantService
+      .getPlantInfo(token!)
+      .subscribe(
+        (res) => (this.energiaTotalConsumida = Number(res.totalEnergy))
+      );
+    this.plantService.getPlantsBasicInfo().subscribe((plantList) => {
+      this.nombrePlanta = plantList.data.find(
+        (plant) => plant.plantId === token
+      )?.plantName!;
+      console.log(this.nombrePlanta);
+    });
   }
 
   get ahorroMonetario() {
-    return this.energiaTotalConsumida*this.ahorroEnS;
+    return this.energiaTotalConsumida * this.ahorroEnS;
   }
   get ahorroEmisionesKG() {
-    return this.energiaTotalConsumida*this.ahorroCO2*1000;
+    return this.energiaTotalConsumida * this.ahorroCO2 * 1000;
   }
 
   logout() {
     this.authService.logout();
     this.router.navigate(['./']);
   }
-
 }

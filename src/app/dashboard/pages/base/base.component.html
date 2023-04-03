@@ -1,28 +1,101 @@
-<div class="base">
-  <div class="base-container">
-    <div class="base-card">
-      <div class="message">
-        <b>¡Hola, {{ nombrePlanta }}!</b> <br />
-        Así vas con Sunner:
+<div class="dashboard">
+  <img src="assets/dashboard-base/db-s.png" alt="" class="db-s" />
+  <img src="assets/dashboard-base/logo1.png" alt="" class="sunner-logo" />
+  <div class="title-section">
+    <div class="title-text">
+      <div class="title-desktop">Hola, {{ "Bravo" }}</div>
+      <div class="title-mobile">Hola,</div>
+      <div class="subtitle">Asi vas con Sunner</div>
+    </div>
+    <div class="title-date">
+      <div class="moment">23/03/2023</div>
+      <img
+        src="assets/dashboard-base/calendar.png"
+        alt=""
+        class="calendar-icon"
+      />
+    </div>
+  </div>
+  <div class="body-section">
+    <div class="body-container">
+      <div class="basic-info">
+        <div class="info-item">
+          <div class="info-icon">
+            <img
+              src="assets/dashboard-base/rayo.png"
+              alt=""
+              class="info-rayo"
+            />
+            <img
+              src="assets/dashboard-base/rayo-s.png"
+              alt=""
+              class="info-rayo-s"
+            />
+          </div>
+          <div class="info-text">
+            <div class="info-title">Energia total:</div>
+            <div class="info-description">
+              {{ energiaTotalConsumida | number : "1.2-2" }} kWh
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <img
+              src="assets/dashboard-base/monedas.png"
+              alt=""
+              class="info-monedas"
+            />
+            <img
+              src="assets/dashboard-base/monedas-s.png"
+              alt=""
+              class="info-monedas-s"
+            />
+          </div>
+          <div class="info-text">
+            <div class="title-info">Ahorro monetario:</div>
+            <div class="info-description">
+              S/ {{ ahorroMonetario | number : "1.2-2" }}
+            </div>
+          </div>
+        </div>
+        <div class="info-item">
+          <div class="info-icon">
+            <img
+              src="assets/dashboard-base/hoja.png"
+              alt=""
+              class="info-hoja"
+            />
+            <img
+              src="assets/dashboard-base/hoja-s.png"
+              alt=""
+              class="info-hoja-s"
+            />
+          </div>
+          <div class="info-text">
+            <div class="title-info">Ahorro en emisiones:</div>
+            <div class="info-description">
+              {{ ahorroEmisionesKG | number : "1.2-2" }} kg de CO
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card-container">
-        <div class="item">
-          Energía total: <br />
-          <b>{{ energiaTotalConsumida | number : "1.2-2" }} KWH</b>
-        </div>
-        <div class="item">
-          Ahorro monetario: <br />
-          <b>S/ {{ ahorroMonetario | number : "1.2-2" }}</b>
-        </div>
-        <div class="item">
-          Ahorro en emisiones: <br />
-          <b>{{ ahorroEmisionesKG | number : "1.2-2" }} kg de CO2.</b>
+      <div class="chart">
+        <div class="chart-container"></div>
+        <div class="moment-selectors">
+          <div class="selector-time">Time</div>
+          <div class="selector-day">Day</div>
+          <div class="selector-month">Month</div>
+          <div class="selector-year">Year</div>
         </div>
       </div>
     </div>
   </div>
+
+  <!-- <div class="base">
   <button class="logout" (click)="logout()">logout</button>
   <div>
     <app-grafico-linear></app-grafico-linear>
   </div>
+</div> -->
 </div>
