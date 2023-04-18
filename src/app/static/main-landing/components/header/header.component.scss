@@ -49,6 +49,9 @@
           width: 12.75px;
           height: 11.33px;
         }
+        &:hover {
+          cursor: pointer;
+        }
       }
       .header-login-button {
         display: flex;

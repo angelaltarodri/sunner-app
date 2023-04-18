@@ -38,4 +38,15 @@ export class CallusComponent implements OnInit {
       element.classList.add('animate__fadeIn');
     });
   }
+
+  openWhatsapp() {
+    const number = '+51970370625';
+    2;
+    const message = 'Hola Sunner, estoy interesado en sistemas solares 👷🏽👷🏾‍♀️⚡';
+    window.open(
+      `https://api.whatsapp.com/send?phone=${number}&text=${encodeURIComponent(
+        message
+      )}`
+    );
+  }
 }
