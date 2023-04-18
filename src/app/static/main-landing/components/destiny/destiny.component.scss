@@ -1,0 +1,23 @@
+.destiny {
+  .destiny-carousel-desktop {
+    display: block;
+    @media (max-width: 1194px) {
+      display: none;
+    }
+  }
+  .destiny-carousel-tablet {
+    display: none;
+    @media (max-width: 1194px) {
+      display: block;
+    }
+    @media (max-width: 416px) {
+      display: none;
+    }
+  }
+  .destiny-carousel-mobile {
+    display: none;
+    @media (max-width: 416px) {
+      display: block;
+    }
+  }
+}

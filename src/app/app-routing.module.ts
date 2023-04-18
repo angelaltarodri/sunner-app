@@ -7,6 +7,11 @@ import { DashboardGuard } from './dashboard/guards/dashboard.guard';
 const routes: Routes = [
   // siempre se espera la declaracion del Modulo Principal del componente al final (AuthModule y HeroesModule)
   {
+    path: '',
+    loadChildren: () =>
+      import('./static/static.module').then((m) => m.StaticModule),
+  },
+  {
     path: 'auth',
     loadChildren: () => import('./auth/auth.module').then((m) => m.AuthModule),
     canLoad: [DashboardGuard],
@@ -25,7 +30,7 @@ const routes: Routes = [
   },
   {
     path: '**',
-    redirectTo: 'auth',
+    redirectTo: '',
   },
 ];
 

@@ -1,0 +1,59 @@
+<div class="projects">
+  <div class="projects-title">Conoce nuestros proyectos</div>
+
+  <app-carousel
+    [items]="items"
+    [liwidth]="'1140px'"
+    [liheight]="'642px'"
+    [xStart]="xStart"
+    [positionScroll]="'center'"
+    [timerMS]="4000"
+    [cgap]="'73px'"
+    [coverflow]="'auto'"
+    class="projects-carousel-desktop"
+  ></app-carousel>
+  <app-carousel
+    [items]="items"
+    [liwidth]="'705px'"
+    [liheight]="'397px'"
+    [xStart]="xStart - 800"
+    [positionScroll]="'center'"
+    [timerMS]="4000"
+    [cgap]="'40px'"
+    [coverflow]="'auto'"
+    class="projects-carousel-tablet"
+  ></app-carousel>
+  <app-carousel
+    [items]="items"
+    [liwidth]="'500px'"
+    [liheight]="'280px'"
+    [xStart]="xStart - 550"
+    [positionScroll]="'center'"
+    [timerMS]="4000"
+    [cgap]="'30px'"
+    [coverflow]="'auto'"
+    class="projects-carousel-semimobile"
+  ></app-carousel>
+  <app-carousel
+    [items]="items"
+    [liwidth]="'340px'"
+    [liheight]="'200px'"
+    [xStart]="xStart - 360"
+    [positionScroll]="'center'"
+    [timerMS]="4000"
+    [cgap]="'19px'"
+    [coverflow]="'auto'"
+    class="projects-carousel-cuasimobile"
+  ></app-carousel>
+  <app-carousel
+    [items]="itemsMobile"
+    [liwidth]="'240px'"
+    [liheight]="'240px'"
+    [xStart]="xStart - 260"
+    [positionScroll]="'center'"
+    [timerMS]="4000"
+    [cgap]="'19px'"
+    [coverflow]="'auto'"
+    class="projects-carousel-mobile"
+  ></app-carousel>
+</div>

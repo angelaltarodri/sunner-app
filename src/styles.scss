@@ -1,6 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "@angular/cdk/overlay-prebuilt.css";
+@import "~animate.css/animate.min.css";
+
 * {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 body {
   margin: 0px;

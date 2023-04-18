@@ -1,0 +1,12 @@
+<ul class="carousel" #carousel [style.gap]="cgap" [style.overflow]="coverflow">
+  <li
+    *ngFor="let item of items; let i = index"
+    [style.background-image]="'url(' + item.backgroundImage + ')'"
+    [style.width]="liwidth"
+    [style.height]="liheight"
+    [style.scroll-snap-align]="positionScroll"
+  >
+    <div class="carousel-title" [innerHTML]="item.titulo"></div>
+    <div class="carousel-subtitle" [innerHTML]="item.subtitulo"></div>
+  </li>
+</ul>
