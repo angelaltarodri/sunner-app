@@ -9,6 +9,7 @@ import { ProjectsComponent } from './main-landing/components/projects/projects.c
 import { FooterComponent } from './main-landing/components/footer/footer.component';
 import { SharedModule } from '../shared/shared.module';
 import { CallusComponent } from './main-landing/components/callus/callus.component';
+import { SaveEnergyLandingComponent } from './save-energy-landing/save-energy-landing.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { CallusComponent } from './main-landing/components/callus/callus.compone
     ProjectsComponent,
     FooterComponent,
     CallusComponent,
+    SaveEnergyLandingComponent,
   ],
   imports: [StaticRoutingModule, CommonModule, SharedModule],
 })
