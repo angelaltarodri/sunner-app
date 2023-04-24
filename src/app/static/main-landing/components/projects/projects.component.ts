@@ -12,34 +12,34 @@ export class ProjectsComponent {
     {
       titulo: '',
       subtitulo: '',
-      backgroundImage: 'assets/static/main-landing/p-magdalena.png',
+      backgroundImage: 'assets/static/main-landing/p-magdalena.webp',
     },
     {
       titulo: '',
       subtitulo: '',
-      backgroundImage: 'assets/static/main-landing/p-casuarinas.png',
+      backgroundImage: 'assets/static/main-landing/p-casuarinas.webp',
     },
     {
       titulo: '',
       subtitulo: '',
-      backgroundImage: 'assets/static/main-landing/p-marsano.png',
+      backgroundImage: 'assets/static/main-landing/p-marsano.webp',
     },
   ];
   itemsMobile = [
     {
       titulo: '',
       subtitulo: '',
-      backgroundImage: 'assets/static/main-landing/p-magdalena-m.png',
+      backgroundImage: 'assets/static/main-landing/p-magdalena-m.webp',
     },
     {
       titulo: '',
       subtitulo: '',
-      backgroundImage: 'assets/static/main-landing/p-casuarinas-m.png',
+      backgroundImage: 'assets/static/main-landing/p-casuarinas-m.webp',
     },
     {
       titulo: '',
       subtitulo: '',
-      backgroundImage: 'assets/static/main-landing/p-marsano-m.png',
+      backgroundImage: 'assets/static/main-landing/p-marsano-m.webp',
     },
   ];
 }

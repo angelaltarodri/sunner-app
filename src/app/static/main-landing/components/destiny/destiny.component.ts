@@ -12,12 +12,12 @@ export class DestinyComponent {
     {
       titulo: 'MISIÓN',
       subtitulo: 'Renovar el consumo energético <br> de nuestros clientes.',
-      backgroundImage: 'assets/static/main-landing/sunner-destiny.png',
+      backgroundImage: 'assets/static/main-landing/sunner-destiny.webp',
     },
     {
       titulo: 'VISIÓN',
       subtitulo: 'Revolucionar el mercado <br> energético Latinoamericano. ',
-      backgroundImage: 'assets/static/main-landing/sunner-destiny.png',
+      backgroundImage: 'assets/static/main-landing/sunner-destiny.webp',
     },
   ];
 }
