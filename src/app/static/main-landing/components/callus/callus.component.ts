@@ -17,25 +17,27 @@ export class CallusComponent implements OnInit {
   ngOnInit(): void {
     this.fadeInDown = Array.from(document.querySelectorAll('.fadeInDown'));
     this.fadeIn = Array.from(document.querySelectorAll('.fadeIn'));
-
-    this.fadeIn.forEach((element) => {
-      element.classList.remove('animate__fadeOutDown');
-    });
   }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const windowHeight = window.innerHeight;
     const elementVisible = 50;
+
     this.fadeInDown.forEach((element) => {
       const elementTop = element.getBoundingClientRect().top;
-      element.classList.add('animate__fadeInDown');
+      const isElementPresent = windowHeight - elementTop;
+      if (isElementPresent > 0 && isElementPresent > elementVisible) {
+        element.classList.add('animate__fadeInDown');
+      }
     });
 
     this.fadeIn.forEach((element) => {
       const elementTop = element.getBoundingClientRect().top;
-
-      element.classList.add('animate__fadeIn');
+      const isElementPresent = windowHeight - elementTop;
+      if (isElementPresent > 0 && isElementPresent > elementVisible) {
+        element.classList.add('animate__fadeIn');
+      }
     });
   }
 

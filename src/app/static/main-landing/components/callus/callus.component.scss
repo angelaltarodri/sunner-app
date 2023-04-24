@@ -13,6 +13,8 @@
     width: 60%;
     max-width: 864px;
     .callus-title {
+      opacity: 0;
+
       font-weight: 500;
       font-size: 36px;
       line-height: 54px;
@@ -28,6 +30,8 @@
       }
     }
     .callus-buttons {
+      opacity: 0;
+
       display: flex;
       gap: 12px;
       justify-content: center;
