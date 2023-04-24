@@ -10,6 +10,8 @@ import { FooterComponent } from './main-landing/components/footer/footer.compone
 import { SharedModule } from '../shared/shared.module';
 import { CallusComponent } from './main-landing/components/callus/callus.component';
 import { SaveEnergyLandingComponent } from './save-energy-landing/save-energy-landing.component';
+import { SaveEnergyFormComponent } from './save-energy-landing/components/save-energy-form/save-energy-form.component';
+import { WhySunnerComponent } from './save-energy-landing/components/why-sunner/why-sunner.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { SaveEnergyLandingComponent } from './save-energy-landing/save-energy-la
     FooterComponent,
     CallusComponent,
     SaveEnergyLandingComponent,
+    SaveEnergyFormComponent,
+    WhySunnerComponent,
   ],
   imports: [StaticRoutingModule, CommonModule, SharedModule],
 })

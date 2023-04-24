@@ -8,6 +8,6 @@ import { Component, OnInit } from '@angular/core';
 export class SaveEnergyLandingComponent implements OnInit {
   constructor() {}
   ngOnInit(): void {
-    console.log(document.referrer);
+    if (document.referrer) console.log(document.referrer);
   }
 }

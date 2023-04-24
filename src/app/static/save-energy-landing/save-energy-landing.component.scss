@@ -1,0 +1,33 @@
+.save-energy-landing {
+  background-image: url("../../../assets/static/save-energy-landing/save-energy-background.png");
+  background-position: center center;
+  background-size: cover;
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  .save-energy-logo-container {
+    display: flex;
+    justify-content: end;
+    @media (max-width: 1220px) {
+      justify-content: center;
+    }
+    .save-energy-logo {
+      width: 223px;
+      height: 87px;
+      margin-top: 103px;
+      margin-right: 45px;
+      margin-bottom: 23px;
+      @media (max-width: 1220px) {
+        margin-top: 73px;
+        margin-right: 0;
+        width: 238px;
+        height: 104px;
+      }
+      @media (max-width: 670px) {
+        margin-top: 53px;
+        width: 129px;
+        height: 56px;
+      }
+    }
+  }
+}
