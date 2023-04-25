@@ -13,7 +13,7 @@ import { SaveEnergyLandingComponent } from './save-energy-landing/save-energy-la
 import { SaveEnergyFormComponent } from './save-energy-landing/components/save-energy-form/save-energy-form.component';
 import { WhySunnerComponent } from './save-energy-landing/components/why-sunner/why-sunner.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MaterialModule } from '../material/material.module';
+import { MaterialModule } from '../shared/material/material.module';
 
 @NgModule({
   declarations: [

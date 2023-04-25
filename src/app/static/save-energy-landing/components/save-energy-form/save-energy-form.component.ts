@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { of, switchMap } from 'rxjs';
+import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service';
 import { ValidatorService } from 'src/app/shared/validator.service';
 
 @Component({
@@ -24,7 +26,8 @@ export class SaveEnergyFormComponent {
 
   constructor(
     private fb: FormBuilder,
-    private validatorService: ValidatorService
+    private validatorService: ValidatorService,
+    private googleFormService: GoogleFormService
   ) {}
 
   campoNoValido(campo: string) {
@@ -35,7 +38,26 @@ export class SaveEnergyFormComponent {
   }
 
   submitSaveEnergyForm() {
-    console.log(this.saveEnergyForm.value);
     this.saveEnergyForm.markAllAsTouched();
+
+    const data = new FormData();
+    data.append('Time', new Date().toString());
+    data.append('Name', this.saveEnergyForm.value.nombres);
+    data.append('Email', this.saveEnergyForm.value.email);
+    data.append('Phone', this.saveEnergyForm.value.celular);
+    data.append('URL', window.location.href);
+    data.append('Form', 'form_lead');
+    data.append(
+      'Rango de Pago Mensual',
+      this.saveEnergyForm.value.rangoPagoMensual
+    );
+    data.append('Tipo de Vivienda', this.saveEnergyForm.value.tipoVivienda);
+    this.googleFormService
+      .submitForm(data)
+      .pipe(switchMap((response) => of(response)))
+      .subscribe(
+        (response) => console.log('Success!', response),
+        (error) => console.error('Error!', error.message)
+      );
   }
 }
