@@ -12,6 +12,8 @@ import { CallusComponent } from './main-landing/components/callus/callus.compone
 import { SaveEnergyLandingComponent } from './save-energy-landing/save-energy-landing.component';
 import { SaveEnergyFormComponent } from './save-energy-landing/components/save-energy-form/save-energy-form.component';
 import { WhySunnerComponent } from './save-energy-landing/components/why-sunner/why-sunner.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -26,6 +28,12 @@ import { WhySunnerComponent } from './save-energy-landing/components/why-sunner/
     SaveEnergyFormComponent,
     WhySunnerComponent,
   ],
-  imports: [StaticRoutingModule, CommonModule, SharedModule],
+  imports: [
+    StaticRoutingModule,
+    CommonModule,
+    SharedModule,
+    ReactiveFormsModule,
+    MaterialModule,
+  ],
 })
 export class StaticModule {}

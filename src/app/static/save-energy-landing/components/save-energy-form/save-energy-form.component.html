@@ -4,31 +4,63 @@
       Ahorra utilizando energías renovables
     </div>
     <div class="save-energy-title_down">CON SUNNER</div>
-    <form class="save-energy-form-body">
+    <form
+      class="save-energy-form-body"
+      [formGroup]="saveEnergyForm"
+      (ngSubmit)="submitSaveEnergyForm()"
+    >
       <div class="input-blocks">
         <label class="save-energy-input_from-block block_1">
           <div>Nombre:<span> *</span></div>
-          <input type="text" class="save-energy-input" />
+          <input
+            type="text"
+            class="save-energy-input"
+            formControlName="nombres"
+          />
         </label>
         <label class="save-energy-input_from-block block_2">
           <div>Correo Electrónico:<span> *</span></div>
-          <input type="email" class="save-energy-input" />
+          <input
+            type="email"
+            class="save-energy-input"
+            formControlName="email"
+          />
         </label>
       </div>
       <div class="input-blocks">
         <label class="save-energy-input_from-block block_3">
           <div>Celular:<span> *</span></div>
-          <input type="text" class="save-energy-input" />
+          <input
+            type="text"
+            class="save-energy-input"
+            formControlName="celular"
+          />
         </label>
         <label class="save-energy-input_from-block block_4">
           <div>Tipo de Vivienda:<span> *</span></div>
-          <input type="text" class="save-energy-input" />
+          <mat-form-field>
+            <mat-label></mat-label>
+            <mat-select formControlName="tipoVivienda">
+              <mat-option value="casa">Casa</mat-option>
+              <mat-option value="departamento">Departamento</mat-option>
+            </mat-select>
+          </mat-form-field>
         </label>
       </div>
       <div class="input-blocks">
         <label class="save-energy-input_from-block block_5">
           <div>Rango de pago mensual promedio (S/):<span> *</span></div>
-          <input type="text" class="save-energy-input" />
+          <mat-form-field>
+            <mat-label></mat-label>
+            <mat-select formControlName="rangoPagoMensual">
+              <mat-option value="0a250">0 a 250</mat-option>
+              <mat-option value="250a650">250 a 650</mat-option>
+              <mat-option value="650a1000">650 a 1000</mat-option>
+              <mat-option value="1000a1350">1000 a 1350</mat-option>
+              <mat-option value="1350a1700">1350 a 1700</mat-option>
+              <mat-option value="1700amas">1700+</mat-option>
+            </mat-select>
+          </mat-form-field>
         </label>
       </div>
       <div class="input-blocks">
