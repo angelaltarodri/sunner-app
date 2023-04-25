@@ -7,7 +7,7 @@ import { Observable, from } from 'rxjs';
 })
 export class GoogleFormService {
   private scriptURL =
-    'https://script.google.com/macros/s/AKfycbySnjR-sy_XbXlEOESFaLPSpo_4A-ZuJkbYC0-YiorU47phi71ULkqztsWijWzApXEH/exec';
+    'https://script.google.com/macros/s/AKfycbzT6h24i37UikCt3fVJ5HI-lsnooyaA-yAaYr4zF1fDAjXEij6tWTKqzHp-TWnD1A/exec';
 
   submitForm(data: FormData): Observable<AxiosResponse> {
     return from(
