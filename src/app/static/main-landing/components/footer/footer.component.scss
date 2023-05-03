@@ -20,6 +20,9 @@
     gap: 4.8px;
     .footer-media_icon {
       height: 26px;
+      &:hover {
+        cursor: pointer;
+      }
       @media (max-width: 470px) {
         height: 13px;
       }
