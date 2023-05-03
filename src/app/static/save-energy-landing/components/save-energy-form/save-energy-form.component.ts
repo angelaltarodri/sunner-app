@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { of, switchMap } from 'rxjs';
 import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service';
 import { ValidatorService } from 'src/app/shared/validator.service';
@@ -19,15 +20,17 @@ export class SaveEnergyFormComponent {
         Validators.pattern(this.validatorService.emailPattern),
       ],
     ],
-    celular: [, [Validators.required]],
+    celular: [, [Validators.required, Validators.minLength(9)]],
     tipoVivienda: [, [Validators.required]],
     rangoPagoMensual: [, [Validators.required]],
+    aceptaInfo: [],
   });
 
   constructor(
     private fb: FormBuilder,
     private validatorService: ValidatorService,
-    private googleFormService: GoogleFormService
+    private googleFormService: GoogleFormService,
+    private snackBar: MatSnackBar
   ) {}
 
   campoNoValido(campo: string) {
@@ -38,8 +41,30 @@ export class SaveEnergyFormComponent {
   }
 
   submitSaveEnergyForm() {
-    this.saveEnergyForm.markAllAsTouched();
+    // si el form es invalido se ejecuta el siguiente proceso:
+    if (this.saveEnergyForm.invalid) {
+      // se asegura que todos los campos se pongan como "tocados" por el usuario
+      this.saveEnergyForm.markAllAsTouched();
+      for (let propiedad in this.saveEnergyForm.value) {
+        // si la propiedad no es valida, se ejecuta la adición de la clase que permite la animación de "shake"
+        if (!this.saveEnergyForm.controls[propiedad].valid) {
+          const elem = document.getElementsByClassName(`${propiedad}`)[0];
+          elem.classList.add('no-valid-shake');
+          // luego de medio segundo, que es lo que dura la animación, se quita la clase
+          setTimeout(() => {
+            elem.classList.remove('no-valid-shake');
+          }, 500);
+        }
+      }
+      // muestra el snackbar avisando al usuario que debe ingresar los datos correctos
+      this.mostrarSnackBar(
+        `Alguno de los datos ingresados es inválido.`,
+        `Volver`
+      );
+      return;
+    }
 
+    // Lo que irá al forms en Google Sheets
     const data = new FormData();
     data.append('Time', new Date().toString());
     data.append('Name', this.saveEnergyForm.value.nombres);
@@ -52,12 +77,23 @@ export class SaveEnergyFormComponent {
       this.saveEnergyForm.value.rangoPagoMensual
     );
     data.append('Tipo de Vivienda', this.saveEnergyForm.value.tipoVivienda);
-    this.googleFormService
-      .submitForm(data)
-      .pipe(switchMap((response) => of(response)))
-      .subscribe(
-        (response) => console.log('Success!', response),
-        (error) => console.error('Error!', error.message)
-      );
+    data.append(
+      '¿Acepta info a su correo?',
+      this.saveEnergyForm.value.aceptaInfo ? 'SI' : 'NO'
+    );
+
+    this.googleFormService.submitForm(data).subscribe(
+      (response) => console.log('Success!', response),
+      (error) => console.error('Error!', error.message)
+    );
+
+    this.saveEnergyForm.reset();
+  }
+
+  mostrarSnackBar(mensaje: string, boton: string) {
+    this.snackBar.open(mensaje, boton, {
+      duration: 2500,
+      panelClass: ['energyform-snackbar'],
+    });
   }
 }

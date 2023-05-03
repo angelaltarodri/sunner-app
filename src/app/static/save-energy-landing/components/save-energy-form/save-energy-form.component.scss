@@ -152,6 +152,9 @@
             @media (max-width: 670px) {
               font-size: 10px;
             }
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
         .save-energy-submit-button {
@@ -180,6 +183,7 @@
           &:hover {
             background-color: #f1480f;
             color: white;
+            cursor: pointer;
           }
           @media (max-width: 1220px) {
             width: 120px;
@@ -267,5 +271,58 @@
     -webkit-transform: translateX(0);
     transform: translateX(0);
     opacity: 1;
+  }
+}
+
+.no-valid-shake {
+  -webkit-animation: shake-horizontal 0.5s linear both;
+  animation: shake-horizontal 0.5s linear both;
+}
+
+@-webkit-keyframes shake-horizontal {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
   }
 }

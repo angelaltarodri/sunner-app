@@ -27,7 +27,6 @@ body {
 .mat-mdc-text-field-wrapper {
   background: white;
   color: black;
-  border: 2px solid #ffbf4b;
 }
 
 .mat-form-field-hide-placeholder .mat-mdc-select-placeholder,
@@ -78,4 +77,25 @@ body {
 
 .mdc-menu-surface.mat-mdc-select-panel {
   padding: 0 !important;
+}
+
+.cdk-overlay-pane {
+  width: 70vw;
+}
+
+.mat-mdc-snack-bar-container {
+  &.energyform-snackbar {
+    --mdc-snackbar-container-color: #f1480f;
+    --mat-mdc-snack-bar-button-color: white;
+    --mdc-snackbar-supporting-text-color: white;
+    color: black;
+  }
+  span {
+    color: #ffbf4b;
+    & * {
+      width: 64px !important;
+      height: 36px !important;
+      border-radius: 5px;
+    }
+  }
 }

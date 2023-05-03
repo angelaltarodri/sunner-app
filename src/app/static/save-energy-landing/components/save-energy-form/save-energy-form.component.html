@@ -11,7 +11,15 @@
     >
       <div class="input-blocks">
         <label class="save-energy-input_from-block block_1">
-          <div>Nombre:<span> *</span></div>
+          <div class="nombres">
+            Nombre:<span
+              [ngStyle]="{
+                color: campoNoValido('nombres') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
           <input
             type="text"
             class="save-energy-input"
@@ -19,7 +27,15 @@
           />
         </label>
         <label class="save-energy-input_from-block block_2">
-          <div>Correo Electrónico:<span> *</span></div>
+          <div class="email">
+            Correo Electrónico:<span
+              [ngStyle]="{
+                color: campoNoValido('email') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
           <input
             type="email"
             class="save-energy-input"
@@ -29,15 +45,33 @@
       </div>
       <div class="input-blocks">
         <label class="save-energy-input_from-block block_3">
-          <div>Celular:<span> *</span></div>
+          <div class="celular">
+            Celular:<span
+              [ngStyle]="{
+                color: campoNoValido('celular') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
           <input
             type="text"
+            pattern="[0-9+-]*"
+            maxlength="12"
             class="save-energy-input"
             formControlName="celular"
           />
         </label>
         <label class="save-energy-input_from-block block_4">
-          <div>Tipo de Vivienda:<span> *</span></div>
+          <div class="tipoVivienda">
+            Tipo de Vivienda:<span
+              [ngStyle]="{
+                color: campoNoValido('tipoVivienda') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
           <mat-form-field>
             <mat-label></mat-label>
             <mat-select formControlName="tipoVivienda">
@@ -49,7 +83,15 @@
       </div>
       <div class="input-blocks">
         <label class="save-energy-input_from-block block_5">
-          <div>Rango de pago mensual promedio (S/):<span> *</span></div>
+          <div class="rangoPagoMensual">
+            Rango de pago mensual promedio (S/):<span
+              [ngStyle]="{
+                color: campoNoValido('rangoPagoMensual') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
           <mat-form-field>
             <mat-label></mat-label>
             <mat-select formControlName="rangoPagoMensual">
@@ -65,7 +107,12 @@
       </div>
       <div class="input-blocks">
         <div class="save-energy-input_from-checkbox">
-          <input type="checkbox" name="acepta-info" id="" />
+          <input
+            type="checkbox"
+            name="acepta-info"
+            id="acepta-info"
+            formControlName="aceptaInfo"
+          />
           <label for="acepta-info" class="save-energy-checkbox_label"
             >Acepto recibir información de SUNNER relacionada a sus
             servicios.</label
