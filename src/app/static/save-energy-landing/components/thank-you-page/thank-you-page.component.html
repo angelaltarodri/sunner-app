@@ -1,0 +1,45 @@
+<div class="thankyou">
+  <div class="thankyou-container">
+    <div class="thankyou-title">¡GRACIAS!</div>
+    <div class="thankyou-subtitle">
+      Pronto, un especialista se pondrá en contacto contigo.
+    </div>
+    <div class="thankyou-question">
+      ¿Sabías que
+      <span>{{ rangoSeleccionado.paneles }} paneles solares Sunner</span> te
+      harán más sostenible?
+    </div>
+    <div class="thankyou-data">
+      <div class="thankyou-data_title">Cada año ahorrarás:</div>
+      <div class="thankyou-data_items">
+        <div class="thankyou-data_kg">
+          <div class="thankyou-data_kg-icon">
+            <img src="assets/static/save-energy-landing/co2.png" alt="" />
+          </div>
+          <div class="thankyou-data_kg-text">
+            <div class="thankyou-data_kg-text-1">
+              {{ rangoSeleccionado.co2 }} KILOGRAMOS
+            </div>
+            <div class="thankyou-data_kg-text-2">de emisiones de CO2</div>
+          </div>
+        </div>
+        <div class="thankyou-data_usd">
+          <div class="thankyou-data_usd-icon">
+            <img src="assets/static/save-energy-landing/usd.png" alt="" />
+          </div>
+          <div class="thankyou-data_usd-text">
+            {{ rangoSeleccionado.dinero }} USD
+          </div>
+        </div>
+        <div class="thankyou-data_tree">
+          <div class="thankyou-data_tree-icon">
+            <img src="assets/static/save-energy-landing/tree.png" alt="" />
+          </div>
+          <div class="thankyou-data_tree-text">
+            {{ rangoSeleccionado.arboles }} ÁRBOLES
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

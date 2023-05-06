@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { of, switchMap } from 'rxjs';
 import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service';
 import { ValidatorService } from 'src/app/shared/validator.service';
+import { RangoPagoMensual } from '../../interfaces/rango-pago-mensual.interface';
 
 @Component({
   selector: 'app-save-energy-form',
@@ -11,6 +12,9 @@ import { ValidatorService } from 'src/app/shared/validator.service';
   styleUrls: ['./save-energy-form.component.scss'],
 })
 export class SaveEnergyFormComponent {
+  @Output() energyForm = new EventEmitter();
+  @Input() datosRangoPagoMensual: RangoPagoMensual[] = [];
+
   saveEnergyForm: FormGroup = this.fb.group({
     nombres: [, [Validators.required, Validators.minLength(3)]],
     email: [
@@ -82,11 +86,16 @@ export class SaveEnergyFormComponent {
       this.saveEnergyForm.value.aceptaInfo ? 'SI' : 'NO'
     );
 
+    // Invoca al servicio de Google
     this.googleFormService.submitForm(data).subscribe(
       (response) => console.log('Success!', response),
       (error) => console.error('Error!', error.message)
     );
 
+    // Envia la información al componente padre para su posterior uso.
+    this.energyForm.emit(this.saveEnergyForm.value.rangoPagoMensual);
+
+    // Resetea el form
     this.saveEnergyForm.reset();
   }
 

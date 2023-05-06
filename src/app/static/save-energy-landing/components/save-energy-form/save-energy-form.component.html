@@ -95,12 +95,11 @@
           <mat-form-field>
             <mat-label></mat-label>
             <mat-select formControlName="rangoPagoMensual">
-              <mat-option value="0 - 250">0 a 250</mat-option>
-              <mat-option value="250 - 650">250 a 650</mat-option>
-              <mat-option value="650 - 1000">650 a 1000</mat-option>
-              <mat-option value="1000 - 1350">1000 a 1350</mat-option>
-              <mat-option value="1350 - 1700">1350 a 1700</mat-option>
-              <mat-option value="1700+">1700+</mat-option>
+              <mat-option
+                *ngFor="let rango of datosRangoPagoMensual"
+                [value]="rango.nombre"
+                >{{ rango.nombre }}</mat-option
+              >
             </mat-select>
           </mat-form-field>
         </label>

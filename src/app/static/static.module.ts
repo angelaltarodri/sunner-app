@@ -14,6 +14,7 @@ import { SaveEnergyFormComponent } from './save-energy-landing/components/save-e
 import { WhySunnerComponent } from './save-energy-landing/components/why-sunner/why-sunner.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../shared/material/material.module';
+import { ThankYouPageComponent } from './save-energy-landing/components/thank-you-page/thank-you-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { MaterialModule } from '../shared/material/material.module';
     SaveEnergyLandingComponent,
     SaveEnergyFormComponent,
     WhySunnerComponent,
+    ThankYouPageComponent,
   ],
   imports: [
     StaticRoutingModule,

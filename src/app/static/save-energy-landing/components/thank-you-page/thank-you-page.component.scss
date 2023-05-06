@@ -1,0 +1,327 @@
+.thankyou {
+  display: flex;
+  justify-content: center;
+  .thankyou-container {
+    max-width: 1116px;
+    width: 93%;
+    text-align: center;
+
+    margin-top: 156px;
+    @media (max-width: 1194px) {
+      margin-top: 240px;
+    }
+    @media (max-width: 936px) {
+      margin-top: 140px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+    }
+    @media (max-width: 500px) {
+      margin-top: 50px;
+    }
+    .thankyou-title {
+      font-weight: 600;
+      font-size: 64px;
+      color: #ffbf4b;
+      letter-spacing: 0.02em;
+      @media (max-width: 1194px) {
+        font-size: 48px;
+      }
+      @media (max-width: 936px) {
+        width: 100%;
+        text-align: start;
+      }
+      @media (max-width: 650px) {
+        font-size: 37px;
+      }
+      @media (max-width: 500px) {
+        font-size: 30px;
+      }
+    }
+    .thankyou-subtitle {
+      margin-top: 19px;
+
+      color: white;
+      font-weight: 400;
+      font-size: 30px;
+      @media (max-width: 1110px) {
+        margin-top: 10px;
+        font-size: 27px;
+      }
+      @media (max-width: 936px) {
+        font-size: 23px;
+        width: 100%;
+        text-align: start;
+      }
+      @media (max-width: 650px) {
+        font-size: 20px;
+      }
+      @media (max-width: 500px) {
+        font-size: 17px;
+      }
+      @media (max-width: 400px) {
+        font-size: 12px;
+        margin-top: 5px;
+      }
+    }
+    .thankyou-question {
+      margin-top: 52px;
+
+      font-weight: 600;
+      font-size: 35px;
+      color: white;
+      @media (max-width: 1194px) {
+        margin-top: 33px;
+        font-size: 32px;
+      }
+      @media (max-width: 1110px) {
+        font-size: 27px;
+      }
+      @media (max-width: 936px) {
+        font-size: 23px;
+        width: 100%;
+        text-align: start;
+      }
+      @media (max-width: 650px) {
+        font-size: 21px;
+      }
+      @media (max-width: 500px) {
+        font-size: 18px;
+      }
+      @media (max-width: 400px) {
+        margin-top: 15px;
+        font-size: 14px;
+      }
+      span {
+        color: #ffbf4b;
+      }
+    }
+    .thankyou-data {
+      border-radius: 20px;
+      background-color: rgba(0, 0, 0, 0.2);
+
+      max-width: 1116px;
+      width: 100%;
+      height: 267px;
+
+      margin-top: 29px;
+      color: white;
+      @media (max-width: 1110px) {
+        height: 230px;
+      }
+      @media (max-width: 936px) {
+        height: 430px;
+        width: 100%;
+      }
+      @media (max-width: 400px) {
+        height: 346px;
+        margin-top: 20px;
+      }
+      .thankyou-data_title {
+        padding-top: 19px;
+        font-weight: 500;
+        font-size: 35px;
+        @media (max-width: 1194px) {
+          font-size: 32px;
+        }
+        @media (max-width: 1110px) {
+          font-size: 27px;
+        }
+        @media (max-width: 936px) {
+          font-size: 23px;
+        }
+        @media (max-width: 650px) {
+          font-size: 21px;
+        }
+
+        @media (max-width: 500px) {
+          font-size: 18px;
+        }
+        @media (max-width: 400px) {
+          font-size: 14px;
+        }
+      }
+      .thankyou-data_items {
+        margin-top: 26px;
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: 936px) {
+          flex-direction: column;
+          align-items: center;
+          gap: 40px;
+        }
+        @media (max-width: 400px) {
+          gap: 25px;
+        }
+        .thankyou-data_kg {
+          display: flex;
+          align-items: center;
+          .thankyou-data_kg-icon {
+            img {
+              width: 91px;
+              height: 91px;
+              margin-right: 17px;
+              @media (max-width: 1110px) {
+                width: 70px;
+                height: 70px;
+              }
+              @media (max-width: 500px) {
+                width: 60px;
+                height: 60px;
+              }
+            }
+            @media (max-width: 936px) {
+              width: 90px;
+              height: 70px;
+            }
+          }
+          .thankyou-data_kg-text {
+            text-align: start;
+            width: 230px;
+            font-weight: 400;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: 936px) {
+              width: 250px;
+              height: 70px;
+              text-align: center;
+              font-weight: 300;
+            }
+            @media (max-width: 650px) {
+              width: 190px;
+            }
+            @media (max-width: 400px) {
+              width: 136px;
+            }
+            .thankyou-data_kg-text-1 {
+              font-size: 26px;
+              @media (max-width: 650px) {
+                font-size: 20px;
+              }
+              @media (max-width: 400px) {
+                font-size: 16px;
+              }
+            }
+            .thankyou-data_kg-text-2 {
+              font-size: 21px;
+              @media (max-width: 650px) {
+                font-size: 16px;
+              }
+              @media (max-width: 400px) {
+                font-size: 12.8px;
+              }
+            }
+          }
+        }
+        .thankyou-data_usd {
+          display: flex;
+          align-items: center;
+          .thankyou-data_usd-icon {
+            img {
+              width: 85.37px;
+              height: 72.04px;
+              margin-right: 21px;
+              @media (max-width: 1110px) {
+                width: 70px;
+                height: 59px;
+              }
+              @media (max-width: 500px) {
+                width: 60px;
+                height: 51px;
+              }
+            }
+            @media (max-width: 936px) {
+              width: 90px;
+              height: 70px;
+            }
+          }
+          .thankyou-data_usd-text {
+            text-align: start;
+            width: 190px;
+
+            font-weight: 400;
+            font-size: 30px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            @media (max-width: 1194px) {
+              width: 136px;
+            }
+            @media (max-width: 936px) {
+              width: 250px;
+              height: 70px;
+              text-align: center;
+              font-weight: 300;
+            }
+            @media (max-width: 650px) {
+              width: 190px;
+              font-size: 20px;
+            }
+            @media (max-width: 400px) {
+              width: 136px;
+              font-size: 16px;
+            }
+          }
+        }
+        .thankyou-data_tree {
+          display: flex;
+          align-items: center;
+          .thankyou-data_tree-icon {
+            img {
+              width: 91px;
+              height: 91px;
+              margin-right: 24px;
+              @media (max-width: 1110px) {
+                width: 70px;
+                height: 70px;
+              }
+              @media (max-width: 500px) {
+                width: 60px;
+                height: 60px;
+              }
+            }
+            @media (max-width: 1110px) {
+              width: 90px;
+              height: 70px;
+            }
+          }
+          .thankyou-data_tree-text {
+            text-align: start;
+            width: 192px;
+
+            font-weight: 400;
+            font-size: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @media (max-width: 1194px) {
+              width: 156px;
+            }
+            @media (max-width: 936px) {
+              width: 250px;
+              height: 70px;
+              text-align: center;
+              font-weight: 300;
+            }
+            @media (max-width: 650px) {
+              width: 190px;
+              font-size: 20px;
+            }
+            @media (max-width: 400px) {
+              width: 136px;
+              font-size: 16px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
