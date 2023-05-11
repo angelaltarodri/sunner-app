@@ -12,7 +12,7 @@ export class ThankYouPageComponent implements OnInit {
 
   rangoSeleccionado!: RangoPagoMensual;
 
-  weWorking: boolean = true;
+  weWorking: boolean = false;
 
   ngOnInit(): void {
     const rangoSeleccionado = this.datosRangoPagoMensual.find(
