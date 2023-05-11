@@ -1,4 +1,4 @@
-<div class="thankyou">
+<div class="thankyou" *ngIf="!weWorking">
   <div class="thankyou-container">
     <div class="thankyou-title">¡GRACIAS!</div>
     <div class="thankyou-subtitle">
@@ -39,6 +39,17 @@
             {{ rangoSeleccionado.arboles }} ÁRBOLES
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="thankyou-weWorking" *ngIf="weWorking">
+  <div class="thankyou-container-weWorking">
+    <div class="thankyou-title-weWorking">¡GRACIAS!</div>
+    <div class="thankyou-data-weWorking">
+      <div class="thankyou-data_title-weWorking">
+        Estamos <span>trabajando</span> para desarrollar el plan más eficiente
+        para ti.
       </div>
     </div>
   </div>

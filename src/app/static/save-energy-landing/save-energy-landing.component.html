@@ -1,5 +1,5 @@
 <div class="save-energy-landing">
-  <div *ngIf="!thankYou">
+  <div *ngIf="thankYou">
     <app-save-energy-form
       (energyForm)="recibirEnergyForm($event)"
       [datosRangoPagoMensual]="datosRangoPagoMensual"
@@ -9,7 +9,7 @@
   </div>
   <!-- Si el formulario es mandado con exito se renderiza el componente ThankYouPage -->
   <app-thank-you-page
-    *ngIf="thankYou"
+    *ngIf="!thankYou"
     [datosRangoPagoMensual]="datosRangoPagoMensual"
     [rangoPagoMensual]="rangoPagoMensual"
   ></app-thank-you-page>

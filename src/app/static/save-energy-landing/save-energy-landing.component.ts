@@ -71,6 +71,5 @@ export class SaveEnergyLandingComponent implements OnInit {
   recibirEnergyForm(rangoPagoMensual: string) {
     this.rangoPagoMensual = rangoPagoMensual;
     this.thankYou = !this.thankYou;
-    console.log(this.rangoPagoMensual);
   }
 }

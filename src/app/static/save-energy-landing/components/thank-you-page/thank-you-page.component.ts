@@ -12,11 +12,17 @@ export class ThankYouPageComponent implements OnInit {
 
   rangoSeleccionado!: RangoPagoMensual;
 
+  weWorking: boolean = true;
+
   ngOnInit(): void {
-    console.log(this.datosRangoPagoMensual);
-    console.log(this.rangoPagoMensual);
-    this.rangoSeleccionado = this.datosRangoPagoMensual.find(
+    const rangoSeleccionado = this.datosRangoPagoMensual.find(
       (rango) => rango.nombre === this.rangoPagoMensual
     )!;
+
+    if (rangoSeleccionado.nombre === '0 a 250') {
+      this.weWorking = true;
+    }
+
+    this.rangoSeleccionado = rangoSeleccionado;
   }
 }
