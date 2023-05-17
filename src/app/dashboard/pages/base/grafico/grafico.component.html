@@ -1,0 +1,52 @@
+<div class="chart">
+  <app-grafico-horas
+    class="chart-container"
+    *ngIf="timespanForm.get('metric')?.value === 'hour'"
+  ></app-grafico-horas>
+  <app-grafico-dias
+    class="chart-container"
+    *ngIf="timespanForm.get('metric')?.value === 'day'"
+  ></app-grafico-dias>
+  <app-grafico-meses
+    class="chart-container"
+    *ngIf="timespanForm.get('metric')?.value === 'month'"
+  ></app-grafico-meses>
+  <app-grafico-anios
+    class="chart-container"
+    *ngIf="timespanForm.get('metric')?.value === 'year'"
+  ></app-grafico-anios>
+  <form class="moment-selectors" [formGroup]="timespanForm">
+    <input
+      type="radio"
+      id="selector-time"
+      name="metric"
+      value="hour"
+      formControlName="metric"
+    />
+    <label for="selector-time" class="selector-time">Horas</label>
+    <input
+      type="radio"
+      id="selector-day"
+      name="metric"
+      value="day"
+      formControlName="metric"
+    />
+    <label for="selector-day" class="selector-day">Dias</label>
+    <input
+      type="radio"
+      id="selector-month"
+      name="metric"
+      value="month"
+      formControlName="metric"
+    />
+    <label for="selector-month" class="selector-month">Meses</label>
+    <input
+      type="radio"
+      id="selector-year"
+      name="metric"
+      value="year"
+      formControlName="metric"
+    />
+    <label for="selector-year" class="selector-year">Años</label>
+  </form>
+</div>

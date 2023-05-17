@@ -30,10 +30,9 @@ export class BaseComponent implements OnInit {
         (res) => (this.energiaTotalConsumida = Number(res.totalEnergy))
       );
     this.plantService.getPlantsBasicInfo().subscribe((plantList) => {
-      this.nombrePlanta = plantList.data.find(
-        (plant) => plant.plantId === token
-      )?.plantName!;
-      console.log(this.nombrePlanta);
+      this.nombrePlanta = plantList.data
+        .find((plant) => plant.plantId === token)
+        ?.plantName!.split(' ')![0]!;
     });
   }
 

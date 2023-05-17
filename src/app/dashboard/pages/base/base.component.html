@@ -3,7 +3,7 @@
   <img src="assets/dashboard-base/logo1.png" alt="" class="sunner-logo" />
   <div class="title-section">
     <div class="title-text">
-      <div class="title-desktop">Hola, {{ "Bravo" }}</div>
+      <div class="title-desktop">Hola, {{ nombrePlanta }}</div>
       <div class="title-mobile">Hola,</div>
       <div class="subtitle">Asi vas con Sunner</div>
     </div>
@@ -80,15 +80,7 @@
           </div>
         </div>
       </div>
-      <div class="chart">
-        <div class="chart-container"></div>
-        <div class="moment-selectors">
-          <div class="selector-time">Time</div>
-          <div class="selector-day">Day</div>
-          <div class="selector-month">Month</div>
-          <div class="selector-year">Year</div>
-        </div>
-      </div>
+      <app-grafico style="width: 100%"></app-grafico>
     </div>
   </div>
 
