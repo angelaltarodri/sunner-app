@@ -1,0 +1,38 @@
+<div class="ver-mas-dialog" mat-dialog-close>
+  <div class="dialog-container">
+    <div class="info-elem">
+      <div class="elem-icon">
+        <img
+          src="./../../../../../../assets/static/residencial-landing/rayo.png"
+          alt=""
+        />
+      </div>
+      <div class="elem-title">Energía total:</div>
+      <div class="elem-numbers">{{ data.proyecto.energiaTotal }} kWh</div>
+    </div>
+    <div class="info-elem">
+      <div class="elem-icon">
+        <img
+          src="./../../../../../../assets/static/residencial-landing/monedas.png"
+          alt=""
+        />
+      </div>
+      <div class="elem-title">Ahorro monetario:</div>
+      <div class="elem-numbers">S/ {{ data.proyecto.ahorroMonetario }}</div>
+    </div>
+    <div class="info-elem">
+      <div class="elem-icon">
+        <img
+          src="./../../../../../../assets/static/residencial-landing/hoja.png"
+          alt=""
+        />
+      </div>
+      <div class="elem-title">Ahorro en emisiones:</div>
+      <div class="elem-numbers">
+        {{ data.proyecto.ahorroEmisiones }} kg de CO<span class="exponent"
+          >2</span
+        >
+      </div>
+    </div>
+  </div>
+</div>

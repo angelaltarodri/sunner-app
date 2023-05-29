@@ -1,0 +1,273 @@
+.faq {
+  position: relative;
+  z-index: 3;
+  background-color: #1a3855;
+  min-height: 1729px;
+  display: flex;
+  justify-content: center;
+  @media (max-width: 1200px) {
+    min-height: 1170px;
+  }
+  @media (max-width: 800px) {
+    min-height: 930px;
+  }
+  @media (max-width: 535px) {
+    min-height: 680px;
+  }
+  .faq-container {
+    z-index: 3;
+    width: 88.6%;
+    max-width: 1276px;
+    height: 1518px;
+    background-color: white;
+    border-radius: 59px;
+    margin-top: 107px;
+    color: #1a3855;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 73px;
+    box-sizing: border-box;
+
+    @media (max-width: 1200px) {
+      margin-top: 53px;
+      height: 1050px;
+    }
+    @media (max-width: 800px) {
+      padding: 53px;
+      height: 820px;
+      border-radius: 40px;
+    }
+    @media (max-width: 630px) {
+      padding: 40px;
+      margin-top: 23px;
+    }
+    @media (max-width: 535px) {
+      padding: 20px;
+      height: 640px;
+      border-radius: 20px;
+    }
+    @media (max-width: 445px) {
+      margin-top: 0px;
+    }
+    .faq-title {
+      font-size: 65px;
+      font-weight: 300;
+      height: min-content;
+      span {
+        font-weight: 600;
+      }
+      @media (max-width: 1200px) {
+        font-size: 30px;
+      }
+      @media (max-width: 800px) {
+        font-size: 23px;
+      }
+      @media (max-width: 630px) {
+        font-size: 19px;
+      }
+      @media (max-width: 535px) {
+        font-size: 16px;
+      }
+    }
+    .faq-opciones {
+      width: 100%;
+
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      font-size: 32px;
+
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 1200px) {
+        font-size: 22px;
+      }
+      @media (max-width: 800px) {
+        font-size: 13px;
+      }
+      @media (max-width: 630px) {
+        font-size: 10px;
+      }
+      .faq-opcion {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid #37475c;
+
+        position: relative;
+
+        @media (max-width: 800px) {
+          border-bottom: 1px solid #37475c;
+        }
+        label {
+          &:hover {
+            cursor: pointer;
+          }
+          max-height: 120px;
+          transition: all 1s ease-in;
+
+          display: flex;
+          flex-direction: column;
+
+          overflow: hidden;
+          @media (max-width: 800px) {
+            max-height: 100px;
+          }
+          @media (max-width: 630px) {
+            max-height: 90px;
+          }
+          @media (max-width: 535px) {
+            max-height: 70px;
+          }
+          .label-title {
+            background-color: white;
+            z-index: 2;
+
+            height: 120px;
+
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            @media (max-width: 800px) {
+              height: 100px;
+            }
+            @media (max-width: 630px) {
+              height: 90px;
+            }
+            @media (max-width: 535px) {
+              height: 70px;
+            }
+          }
+          .label-description {
+            z-index: 1;
+            padding-bottom: 30px;
+            box-sizing: border-box;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        .plus-sign {
+          &:hover {
+            cursor: pointer;
+          }
+          z-index: 2;
+          position: absolute;
+          right: 0px;
+          top: 40px;
+          // background: #1a3855;
+          // color: white;
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          @media (max-width: 5350px) {
+            height: 10px;
+          }
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          transform: rotate(0deg);
+          transition: transform 0.5s ease-in-out;
+
+          font-size: 30px;
+          @media (max-width: 800px) {
+            font-size: 23px;
+          }
+        }
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"]:checked + label {
+        max-height: 700px;
+      }
+      input[type="radio"]:checked ~ .plus-sign {
+        transform: rotate(405deg);
+      }
+    }
+    .dudas {
+      z-index: 10;
+      position: absolute;
+      bottom: 170px;
+      @media (max-width: 1200px) {
+        bottom: 120px;
+      }
+      @media (max-width: 800px) {
+        bottom: 60px;
+      }
+      .dudas-title {
+        font-weight: 500;
+        font-size: 36px;
+        text-align: center;
+        @media (max-width: 1200px) {
+          font-size: 20px;
+        }
+        @media (max-width: 630px) {
+          font-size: 16px;
+        }
+        @media (max-width: 535px) {
+          font-size: 13px;
+        }
+      }
+      .dudas-botones {
+        margin-top: 15px;
+        display: flex;
+        gap: 16px;
+        .dudas-whatsapp {
+          img {
+            width: 76px;
+            @media (max-width: 1200px) {
+              width: 41px;
+            }
+            @media (max-width: 630px) {
+              width: 28px;
+            }
+            @media (max-width: 535px) {
+              width: 20px;
+            }
+            &:hover {
+              cursor: pointer;
+            }
+          }
+        }
+        .dudas-escribenos {
+          width: 537px;
+          border: none;
+          background: #ffbf4b;
+          border-radius: 20px;
+          text-align: center;
+          letter-spacing: 0.08em;
+          font-size: 26px;
+          font-weight: 600;
+          transition: 0.5s;
+          @media (max-width: 1200px) {
+            width: 286.98px;
+            height: 49.08px;
+            font-size: 14px;
+          }
+          @media (max-width: 630px) {
+            width: 240px;
+            height: 36px;
+            font-size: 10px;
+          }
+          @media (max-width: 535px) {
+            width: 200px;
+            height: 26px;
+            font-size: 8px;
+          }
+          &:hover {
+            cursor: pointer;
+            background-color: #ffffff;
+            border: 2px solid black;
+          }
+        }
+      }
+    }
+  }
+}

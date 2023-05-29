@@ -1,0 +1,98 @@
+<div class="faq">
+  <div class="faq-container">
+    <div class="faq-title">Preguntas <span>Frecuentes</span></div>
+    <div class="faq-opciones">
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="queespanelsolar"
+          name="pregunta"
+          [checked]="isCheckedMap['queespanelsolar']"
+        />
+        <label class="faq-pregunta" for="queespanelsolar">
+          <div class="label-title">¿QUÉ ES UN PANEL SOLAR?</div>
+          <div class="label-description">
+            Es el intervalo del día, de 6 am a 6 pm, donde un sistema
+            fotovoltaico produce energía.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'queespanelsolar')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="queeshorario"
+          name="pregunta"
+          [checked]="isCheckedMap['queeshorario']"
+        />
+        <label class="faq-pregunta" for="queeshorario">
+          <div class="label-title">¿QUÉ ES EL HORARIO DE PRODUCCIÓN SOLAR?</div>
+          <div class="label-description">
+            Es el intervalo del día, de 6 am a 6 pm, donde un sistema
+            fotovoltaico produce energía.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'queeshorario')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="queessistema"
+          name="pregunta"
+          [checked]="isCheckedMap['queessistema']"
+        />
+        <label class="faq-pregunta" for="queessistema">
+          <div class="label-title">¿QUÉ ES UN SISTEMA FOTOVOLTAICO?</div>
+          <div class="label-description">
+            Es el intervalo del día, de 6 am a 6 pm, donde un sistema
+            fotovoltaico produce energía.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'queessistema')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="quetipossitemas"
+          name="pregunta"
+          [checked]="isCheckedMap['quetipossitemas']"
+        />
+        <label class="faq-pregunta" for="quetipossitemas">
+          <div class="label-title">¿QUÉ TIPOS DE SISTEMAS SOLARES EXISTEN?</div>
+          <div class="label-description">
+            Es el intervalo del día, de 6 am a 6 pm, donde un sistema
+            fotovoltaico produce energía.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'quetipossitemas')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <label class="faq-pregunta" class="faq-pregunta" for="quetipossitemas">
+          <div class="label-title"></div>
+          <div class="label-description"></div>
+        </label>
+      </div>
+    </div>
+    <div class="dudas">
+      <div class="dudas-title">¿Dudas acerca de nuestro servicio?</div>
+
+      <div class="dudas-botones" (click)="openWhatsapp()">
+        <div class="dudas-whatsapp">
+          <img
+            src="./../../../../../assets/static/main-landing/whatsapp-blue.png"
+            alt=""
+          />
+        </div>
+        <button class="dudas-escribenos">ESCRÍBENOS POR WHATSAPP</button>
+      </div>
+    </div>
+  </div>
+</div>

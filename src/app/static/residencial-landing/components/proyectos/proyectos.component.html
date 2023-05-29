@@ -1,0 +1,39 @@
+<div class="proyectos">
+  <div class="proyectos-container">
+    <div class="proyectos-title"><span>Conoce</span> nuestros proyectos</div>
+    <div class="proyectos-slider">
+      <section class="carousel" aria-label="Gallery">
+        <div class="bottom-shade"></div>
+        <ol class="carousel__viewport" #carouselViewport>
+          <li id="carousel__slide1" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+          </li>
+          <li id="carousel__slide2" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+          </li>
+          <li id="carousel__slide3" tabindex="0" class="carousel__slide">
+            <div class="carousel__snapper"></div>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </div>
+  <div class="navigator">
+    <div class="flecha-anterior" (click)="anterior()">
+      <img
+        src="./../../../../../assets/static/residencial-landing/flecha.png"
+        alt=""
+      />
+    </div>
+    <div class="navigator-info">
+      <div class="titulo">Proyecto {{ getNombreProyectoActual() }}</div>
+      <div class="ver-mas" (click)="openVerMas()">Ver más</div>
+    </div>
+    <div class="flecha-siguiente" (click)="siguiente()">
+      <img
+        src="./../../../../../assets/static/residencial-landing/flecha.png"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
