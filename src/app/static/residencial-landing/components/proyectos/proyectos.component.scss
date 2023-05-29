@@ -4,6 +4,8 @@
   justify-content: center;
   position: relative;
 
+  -webkit-tap-highlight-color: transparent;
+
   @media (max-width: 1200px) {
     min-height: 920px;
   }
@@ -114,7 +116,19 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+      width: 380px;
+      text-align: center;
+      @media (max-width: 1200px) {
+        width: 220px;
+      }
+      @media (max-width: 800px) {
+        width: 190px;
+      }
+      @media (max-width: 535px) {
+        width: 170px;
+      }
       .titulo {
+        width: 100%;
         font-weight: 600;
         @media (max-width: 1200px) {
           font-size: 20px;
@@ -162,6 +176,7 @@
     }
     .flecha-anterior,
     .flecha-siguiente {
+      user-select: none;
       &:hover {
         cursor: pointer;
       }
