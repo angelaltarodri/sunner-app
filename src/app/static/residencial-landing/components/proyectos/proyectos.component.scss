@@ -277,6 +277,7 @@ li {
     background: linear-gradient(180deg, transparent, #00101d8f 59.81%);
     mix-blend-mode: luminosity;
     opacity: 0.7;
+    border: 1px solid white;
   }
   .carousel__viewport {
     position: absolute;
@@ -306,16 +307,19 @@ li {
         background-image: url("./../../../../../assets/static/residencial-landing/casuarinas.webp");
         background-position: center center;
         background-size: cover;
+        filter: brightness(0.7);
       }
       &:nth-child(2) {
         background-image: url("./../../../../../assets/static/residencial-landing/magdalena.webp");
         background-position: center center;
         background-size: cover;
+        filter: brightness(0.9);
       }
       &:nth-child(3) {
         background-image: url("./../../../../../assets/static/residencial-landing/marsano.webp");
         background-position: center center;
         background-size: cover;
+        filter: brightness(0.7);
       }
       &:last-child .carousel__snapper {
         @media (hover: hover) {
