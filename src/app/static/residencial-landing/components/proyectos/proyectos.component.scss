@@ -5,15 +5,17 @@
   position: relative;
 
   -webkit-tap-highlight-color: transparent;
-
+  @media (max-width: 1800px) {
+    min-height: 890px;
+  }
   @media (max-width: 1200px) {
-    min-height: 920px;
+    min-height: 870px;
   }
   @media (max-width: 800px) {
-    min-height: 780px;
+    min-height: 720px;
   }
   @media (max-width: 630px) {
-    min-height: 640px;
+    min-height: 600px;
   }
   @media (max-width: 535px) {
     min-height: 460px;
@@ -22,27 +24,29 @@
     width: 88.6%;
     max-width: 1276px;
     height: 518px;
-    background-color: white;
+    background-color: #1a3855;
+    border: 3px solid #ffb901;
     border-radius: 59px;
-    margin-top: 107px;
-    color: #1a3855;
+    margin-top: 53px;
+    color: #ffb901;
 
     display: flex;
     align-items: center;
     flex-direction: column;
 
-    padding: 53px 73px;
+    padding: 45px 73px;
     box-sizing: border-box;
     @media (max-width: 630px) {
       margin-top: 40px;
-      padding: 55px;
+      padding: 35px;
     }
     @media (max-width: 535px) {
       padding: 30px;
       height: 300px;
     }
     .proyectos-title {
-      font-size: 65px;
+      text-align: center;
+      font-size: 40px;
       font-weight: 300;
       height: min-content;
       span {
@@ -56,6 +60,9 @@
       }
       @media (max-width: 535px) {
         font-size: 16px;
+      }
+      @media (max-width: 350px) {
+        font-size: 14px;
       }
     }
     .proyectos-slider {
@@ -83,7 +90,7 @@
       bottom: 140px;
     }
     @media (max-width: 800px) {
-      bottom: 120px;
+      bottom: 70px;
     }
     @media (max-width: 535px) {
       bottom: 30px;
@@ -116,20 +123,24 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      width: 380px;
+      width: 480px;
       text-align: center;
       @media (max-width: 1200px) {
-        width: 220px;
+        width: 280px;
       }
       @media (max-width: 800px) {
-        width: 190px;
+        width: 250px;
       }
       @media (max-width: 535px) {
-        width: 170px;
+        width: 200px;
       }
       .titulo {
         width: 100%;
         font-weight: 600;
+        letter-spacing: 0.1em;
+        @media (max-width: 1800px) {
+          font-size: 35px;
+        }
         @media (max-width: 1200px) {
           font-size: 20px;
         }
@@ -141,7 +152,10 @@
         }
       }
       .ver-mas {
-        font-weight: 200;
+        font-weight: 300;
+        color: #ffb901;
+        letter-spacing: 0.1em;
+        font-size: 30px;
         &:hover {
           cursor: pointer;
         }

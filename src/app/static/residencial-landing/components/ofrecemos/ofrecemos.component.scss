@@ -9,7 +9,9 @@
   align-items: center;
 
   color: #0f243f;
-
+  @media (max-width: 1800px) {
+    height: 1370px;
+  }
   @media (max-width: 1200px) {
     height: 1200px;
   }
@@ -65,7 +67,10 @@
     span {
       font-weight: 600;
     }
-
+    @media (max-width: 1800px) {
+      font-size: 40px;
+      width: 790px;
+    }
     @media (max-width: 1200px) {
       font-size: 30px;
       width: 590px;
@@ -90,6 +95,10 @@
     font-weight: 300;
     margin-top: 2vh;
     text-align: center;
+    @media (max-width: 1800px) {
+      font-size: 20px;
+      width: 830px;
+    }
     @media (max-width: 1200px) {
       font-size: 17px;
 
@@ -142,7 +151,7 @@
       .especialista-info {
         margin-top: 16px;
         letter-spacing: 0.05em;
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
         @media (max-width: 1200px) {
           font-size: 13px;
