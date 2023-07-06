@@ -1,0 +1,74 @@
+<div class="dialog">
+  <div class="form-dialog">
+    <div class="xbutton" mat-dialog-close>
+      <img
+        src="./../../../../../assets/static/residencial-landing/close.png"
+        alt=""
+      />
+    </div>
+    <div class="form-dialog-container">
+      <div class="form-title">¿NO TIENES TU RECIBO DE LUZ A LA MANO?</div>
+      <div class="form-description">
+        Déjanos tus datos y un especialista en energía solar se comunicará
+        contigo.
+      </div>
+      <form [formGroup]="dialogForm" (ngSubmit)="submitDialogForm()">
+        <div class="form">
+          <div class="input-dialog-form nombre">
+            <label for="nombre"
+              >Nombre:
+              <span
+                [ngStyle]="{
+                  color: campoNoValido('nombre') ? '#f1480f' : '#ffbf4b'
+                }"
+                >*</span
+              >
+            </label>
+            <input
+              id="nombre"
+              name="nombre"
+              type="text"
+              formControlName="nombre"
+            />
+          </div>
+          <div class="input-dialog-form email">
+            <label for="nombre"
+              >Correo Electrónico:
+              <span
+                [ngStyle]="{
+                  color: campoNoValido('email') ? '#f1480f' : '#ffbf4b'
+                }"
+                >*</span
+              >
+            </label>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              formControlName="email"
+            />
+          </div>
+          <div class="input-dialog-form whatsapp">
+            <label for="nombre"
+              >Whatsapp:
+              <span
+                [ngStyle]="{
+                  color: campoNoValido('whatsapp') ? '#f1480f' : '#ffbf4b'
+                }"
+                >*</span
+              >
+            </label>
+            <input
+              id="whatsapp"
+              name="whatsapp"
+              type="text"
+              formControlName="whatsapp"
+            />
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="dialogForm.pending">ENVIAR</button>
+      </form>
+    </div>
+  </div>
+</div>

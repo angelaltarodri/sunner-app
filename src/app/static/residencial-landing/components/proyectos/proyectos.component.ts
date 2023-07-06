@@ -19,18 +19,24 @@ export class ProyectosComponent {
       energiaTotal: '366.10',
       ahorroMonetario: '256.27',
       ahorroEmisiones: '169.83',
+      urlImagen:
+        './../../../../../../assets/static/residencial-landing/casuarinas.webp',
     },
     {
       nombre: 'Magdalena',
       energiaTotal: '356.10',
       ahorroMonetario: '246.27',
       ahorroEmisiones: '159.83',
+      urlImagen:
+        './../../../../../../assets/static/residencial-landing/magdalena.webp',
     },
     {
       nombre: 'Marsano',
       energiaTotal: '346.10',
       ahorroMonetario: '236.27',
       ahorroEmisiones: '149.83',
+      urlImagen:
+        './../../../../../../assets/static/residencial-landing/marsano.webp',
     },
   ];
 
@@ -61,8 +67,9 @@ export class ProyectosComponent {
     };
 
     const verMasDialog = this.dialog.open(VerMasDialogComponent, {
-      width: '80%',
+      width: '95vw',
       data: data,
+      backdropClass: 'backdropBackground',
     });
   }
 }

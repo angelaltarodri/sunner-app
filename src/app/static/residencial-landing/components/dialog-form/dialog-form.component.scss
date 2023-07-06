@@ -1,0 +1,210 @@
+.dialog {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  .form-dialog {
+    position: relative;
+
+    width: 60%;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+
+    font-weight: 300;
+    font-size: 18px;
+    background-image: url("./../../../../../assets/static/residencial-landing/formDialogBack.png");
+    background-position: center start;
+    background-size: 220% 220% cover;
+    color: #f0f0f0;
+
+    position: relative;
+
+    @media (max-width: 1100px) {
+      width: 80%;
+    }
+
+    @media (max-width: 860px) {
+      width: 100%;
+    }
+
+    .xbutton {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      img {
+        width: 31px;
+        height: 31px;
+      }
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .form-dialog-container {
+      margin-top: 5vh;
+      margin-bottom: 80px;
+      max-width: 490px;
+      width: 77vw;
+      @media (max-width: 660px) {
+        max-width: 410px;
+      }
+      @media (max-width: 560px) {
+        max-width: 340px;
+      }
+      @media (max-width: 425px) {
+        max-width: 290px;
+      }
+      .form-title {
+        font-size: 32px;
+        font-weight: 700;
+        line-height: normal;
+        @media (max-width: 660px) {
+          font-size: 28px;
+        }
+        @media (max-width: 560px) {
+          font-size: 20px;
+        }
+      }
+      .form-description {
+        width: 85%;
+        margin-top: 10px;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+        @media (max-width: 660px) {
+          font-size: 17px;
+        }
+        @media (max-width: 560px) {
+          font-size: 12px;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .form {
+          margin-top: 30px;
+          background: #f0f0f0;
+          width: 100%;
+          color: #00346d;
+
+          padding: 33px 33px 50px 33px;
+          box-sizing: border-box;
+
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+          .input-dialog-form {
+            display: flex;
+            flex-direction: column;
+            label {
+              font-size: 24px;
+              font-weight: 500;
+              span {
+                color: #a60000;
+              }
+              @media (max-width: 660px) {
+                font-size: 20px;
+              }
+              @media (max-width: 560px) {
+                font-size: 15px;
+              }
+            }
+            input {
+              height: 44px;
+              font-size: 24px;
+              padding-left: 20px;
+              box-sizing: border-box;
+              @media (max-width: 660px) {
+                font-size: 20px;
+                height: 38px;
+              }
+              @media (max-width: 560px) {
+                font-size: 15px;
+                height: 30px;
+              }
+            }
+          }
+        }
+        button[type="submit"] {
+          width: 152px;
+          height: 50px;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          background: #ffbf4b;
+          border: none;
+          margin-top: 50px;
+          &:hover {
+            cursor: pointer;
+          }
+          @media (max-width: 660px) {
+            width: 122px;
+            height: 40px;
+            font-size: 20px;
+          }
+          @media (max-width: 560px) {
+            width: 90px;
+            height: 32px;
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .no-valid-shake {
+    -webkit-animation: shake-horizontal 0.5s linear both;
+    animation: shake-horizontal 0.5s linear both;
+  }
+
+  @-webkit-keyframes shake-horizontal {
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    70% {
+      -webkit-transform: translateX(-10px);
+      transform: translateX(-10px);
+    }
+
+    60% {
+      -webkit-transform: translateX(10px);
+      transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+      transform: translateX(-8px);
+    }
+  }
+  @keyframes shake-horizontal {
+    100% {
+      -webkit-transform: translateX(0);
+      transform: translateX(0);
+    }
+
+    70% {
+      -webkit-transform: translateX(-10px);
+      transform: translateX(-10px);
+    }
+    60% {
+      -webkit-transform: translateX(10px);
+      transform: translateX(10px);
+    }
+    80% {
+      -webkit-transform: translateX(8px);
+      transform: translateX(8px);
+    }
+    90% {
+      -webkit-transform: translateX(-8px);
+      transform: translateX(-8px);
+    }
+  }
+}

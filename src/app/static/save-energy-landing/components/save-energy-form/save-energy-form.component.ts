@@ -1,7 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { of, switchMap } from 'rxjs';
 import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service';
 import { ValidatorService } from 'src/app/shared/validator.service';
 import { RangoPagoMensual } from '../../interfaces/rango-pago-mensual.interface';
@@ -87,7 +86,7 @@ export class SaveEnergyFormComponent {
     );
 
     // Invoca al servicio de Google
-    this.googleFormService.submitForm(data).subscribe(
+    this.googleFormService.submitFormAhorra(data).subscribe(
       (response) => console.log('Success!', response),
       (error) => console.error('Error!', error.message)
     );

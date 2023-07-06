@@ -22,6 +22,7 @@ import { OfrecemosComponent } from './residencial-landing/components/ofrecemos/o
 import { FaqComponent } from './residencial-landing/components/faq/faq.component';
 import { ProyectosComponent } from './residencial-landing/components/proyectos/proyectos.component';
 import { VerMasDialogComponent } from './residencial-landing/components/proyectos/ver-mas-dialog/ver-mas-dialog.component';
+import { DialogFormComponent } from './residencial-landing/components/dialog-form/dialog-form.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { VerMasDialogComponent } from './residencial-landing/components/proyecto
     FaqComponent,
     ProyectosComponent,
     VerMasDialogComponent,
+    DialogFormComponent,
   ],
   imports: [
     StaticRoutingModule,

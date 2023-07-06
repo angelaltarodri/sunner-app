@@ -6,13 +6,26 @@ import { Observable, from } from 'rxjs';
   providedIn: 'root',
 })
 export class GoogleFormService {
-  private scriptURL =
+  private scriptURLAhorra =
     'https://script.google.com/macros/s/AKfycbzT6h24i37UikCt3fVJ5HI-lsnooyaA-yAaYr4zF1fDAjXEij6tWTKqzHp-TWnD1A/exec';
-
-  submitForm(data: FormData): Observable<AxiosResponse> {
+  private scriptURLDialog =
+    'https://script.google.com/macros/s/AKfycby24-kVZGsGxNVQOdTqGXyTAEsMd7cRIApyt2rzk6pde_PPd_4yv0I6C8qzWy-3-UU8/exec';
+  submitFormAhorra(data: FormData): Observable<AxiosResponse> {
     return from(
       axios
-        .post(this.scriptURL, data)
+        .post(this.scriptURLAhorra, data)
+        .then((response) => response)
+        .catch((error) => {
+          console.error('Error!', error.message);
+          return error;
+        })
+    );
+  }
+
+  submitFormDialog(data: FormData): Observable<AxiosResponse> {
+    return from(
+      axios
+        .post(this.scriptURLDialog, data)
         .then((response) => response)
         .catch((error) => {
           console.error('Error!', error.message);

@@ -1,9 +1,27 @@
-<div class="ver-mas-dialog" mat-dialog-close>
+<div
+  class="ver-mas-dialog"
+  mat-dialog-close
+  [ngStyle]="{ 'background-image': 'url(' + data.proyecto.urlImagen + ')' }"
+>
+  <div class="shadow"></div>
   <div class="dialog-container">
+    <div class="info-elem">
+      <div class="elem-space"></div>
+      <div class="elem-suptitle">
+        Proyecto <b>{{ data.proyecto.nombre }}</b>
+      </div>
+    </div>
+    <div class="info-elem">
+      <div class="elem-space"></div>
+      <div class="elem-description">
+        Nuestros especialistas tienen años de experiencia en el sector de
+        energía y están en constante capacitación teórica y práctica.
+      </div>
+    </div>
     <div class="info-elem">
       <div class="elem-icon">
         <img
-          src="./../../../../../../assets/static/residencial-landing/rayo.png"
+          src="./../../../../../../assets/static/save-energy-landing/i-rayo.png"
           alt=""
         />
       </div>
@@ -13,7 +31,7 @@
     <div class="info-elem">
       <div class="elem-icon">
         <img
-          src="./../../../../../../assets/static/residencial-landing/monedas.png"
+          src="./../../../../../../assets/static/save-energy-landing/i-solida.png"
           alt=""
         />
       </div>
@@ -23,7 +41,7 @@
     <div class="info-elem">
       <div class="elem-icon">
         <img
-          src="./../../../../../../assets/static/residencial-landing/hoja.png"
+          src="./../../../../../../assets/static/save-energy-landing/i-leaf.png"
           alt=""
         />
       </div>

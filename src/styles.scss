@@ -80,10 +80,6 @@ body {
   padding: 0 !important;
 }
 
-.cdk-overlay-pane {
-  width: 70vw;
-}
-
 .mat-mdc-snack-bar-container {
   &.energyform-snackbar {
     --mdc-snackbar-container-color: #f1480f;
@@ -103,4 +99,21 @@ body {
 
 .mat-mdc-dialog-container .mdc-dialog__surface {
   background-color: transparent !important;
+}
+.cdk-global-overlay-wrapper {
+  .cdk-overlay-pane {
+    max-width: 100vw !important;
+  }
+}
+
+.backdropBackground {
+  background: rgba(255, 255, 255, 0.523);
+}
+
+.dialogFormpBackground {
+  background: rgba(0, 0, 0, 0.523);
+}
+
+.mat-mdc-dialog-container .mdc-dialog__surface {
+  box-shadow: none !important;
 }
