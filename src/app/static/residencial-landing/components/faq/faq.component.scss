@@ -19,10 +19,11 @@
     z-index: 3;
     width: 88.6%;
     max-width: 1276px;
-    height: 1618px;
+
+    height: 2000px;
     background-color: white;
     border-radius: 59px 59px 0px 0px;
-    margin-top: 157px;
+    margin-top: 127px;
     color: #1a3855;
 
     position: relative;
@@ -31,10 +32,10 @@
     align-items: center;
     flex-direction: column;
 
-    padding: 173px;
+    padding: 123px;
     box-sizing: border-box;
-    @media (max-width: 1800px) {
-      height: 2000px;
+    @media (max-width: 2000px) {
+      height: 1870px;
     }
     @media (max-width: 1200px) {
       margin-top: 103px;
@@ -65,7 +66,7 @@
       span {
         font-weight: 600;
       }
-      @media (max-width: 1800px) {
+      @media (max-width: 2000px) {
         font-size: 45px;
       }
       @media (max-width: 1200px) {
@@ -91,7 +92,7 @@
 
       display: flex;
       flex-direction: column;
-      @media (max-width: 1800px) {
+      @media (max-width: 2000px) {
         font-size: 25px;
       }
       @media (max-width: 1200px) {
@@ -206,6 +207,9 @@
       z-index: 10;
       position: absolute;
       bottom: 170px;
+      @media (max-width: 2000px) {
+        bottom: 140px;
+      }
       @media (max-width: 1200px) {
         bottom: 120px;
       }
@@ -216,6 +220,9 @@
         font-weight: 500;
         font-size: 36px;
         text-align: center;
+        @media (max-width: 2000px) {
+          font-size: 30px;
+        }
         @media (max-width: 1200px) {
           font-size: 20px;
         }
@@ -233,6 +240,9 @@
         .dudas-whatsapp {
           img {
             width: 76px;
+            @media (max-width: 2000px) {
+              width: 51px;
+            }
             @media (max-width: 1200px) {
               width: 41px;
             }
@@ -257,6 +267,11 @@
           font-size: 26px;
           font-weight: 600;
           transition: 0.5s;
+          @media (max-width: 2000px) {
+            width: 486.98px;
+            height: 69.08px;
+            font-size: 22px;
+          }
           @media (max-width: 1200px) {
             width: 286.98px;
             height: 49.08px;

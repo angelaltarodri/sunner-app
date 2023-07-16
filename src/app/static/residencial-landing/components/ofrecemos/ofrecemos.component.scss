@@ -9,8 +9,8 @@
   align-items: center;
 
   color: #0f243f;
-  @media (max-width: 1800px) {
-    height: 1370px;
+  @media (max-width: 2000px) {
+    height: 1470px;
   }
   @media (max-width: 1200px) {
     height: 1200px;
@@ -67,7 +67,7 @@
     span {
       font-weight: 600;
     }
-    @media (max-width: 1800px) {
+    @media (max-width: 2000px) {
       font-size: 40px;
       width: 790px;
     }
@@ -95,7 +95,7 @@
     font-weight: 300;
     margin-top: 2vh;
     text-align: center;
-    @media (max-width: 1800px) {
+    @media (max-width: 2000px) {
       font-size: 20px;
       width: 830px;
     }
