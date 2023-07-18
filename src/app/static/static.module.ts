@@ -23,6 +23,10 @@ import { FaqComponent } from './residencial-landing/components/faq/faq.component
 import { ProyectosComponent } from './residencial-landing/components/proyectos/proyectos.component';
 import { VerMasDialogComponent } from './residencial-landing/components/proyectos/ver-mas-dialog/ver-mas-dialog.component';
 import { DialogFormComponent } from './residencial-landing/components/dialog-form/dialog-form.component';
+import { BonoVerdeLandingComponent } from './bono-verde-landing/bono-verde-landing.component';
+import { BonoVerdeFormComponent } from './bono-verde-landing/components/bono-verde-form/bono-verde-form.component';
+import { AlboradaProyectComponent } from './bono-verde-landing/components/alborada-proyect/alborada-proyect.component';
+import { DudasComponent } from './bono-verde-landing/dudas/dudas.component';
 
 @NgModule({
   declarations: [
@@ -45,6 +49,10 @@ import { DialogFormComponent } from './residencial-landing/components/dialog-for
     ProyectosComponent,
     VerMasDialogComponent,
     DialogFormComponent,
+    BonoVerdeLandingComponent,
+    BonoVerdeFormComponent,
+    AlboradaProyectComponent,
+    DudasComponent,
   ],
   imports: [
     StaticRoutingModule,

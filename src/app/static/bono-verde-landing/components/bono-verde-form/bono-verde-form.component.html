@@ -1,0 +1,191 @@
+<div class="save-energy-form">
+  <div class="filtro-azul"></div>
+  <div class="cta-header">
+    <a href="/">
+      <img
+        src="./../../../../../assets/static/bono-verde-landing/sunner.webp"
+        alt=""
+        class="sunner-logo"
+      />
+    </a>
+    <div class="links">
+      <div class="link nosotros">
+        <!-- NOSOTROS -->
+      </div>
+      <div class="link empresas">
+        <!-- EMPRESAS -->
+      </div>
+      <a href="/bono-verde" class="link bono-mivivienda"
+        ><span>BONO</span> MIVIVIENDA</a
+      >
+      <div class="link noticias">
+        <!-- NOTICIAS -->
+      </div>
+    </div>
+  </div>
+  <div class="save-energy-form-container">
+    <div class="save-energy-title_up">
+      Facilitamos que tu proyecto inmobiliario sea parte del bono mi vivienda
+      verde.
+    </div>
+    <div class="save-energy-title_down">
+      Formamos alianzas en etapas tempranas del proyecto para ofrecerte mejores
+      precios.
+    </div>
+    <form
+      class="save-energy-form-body"
+      [formGroup]="bonoVerdeForm"
+      (ngSubmit)="submitBonoVerdeForm()"
+    >
+      <div class="input-blocks">
+        <label class="save-energy-input_from-block block_1">
+          <div class="nombres">
+            Nombre:<span
+              [ngStyle]="{
+                color: campoNoValido('nombres') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="text"
+            class="save-energy-input"
+            formControlName="nombres"
+          />
+        </label>
+        <label class="save-energy-input_from-block block_3">
+          <div class="telefono">
+            Telefono:<span
+              [ngStyle]="{
+                color: campoNoValido('telefono') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="text"
+            pattern="[0-9+-]*"
+            maxlength="12"
+            class="save-energy-input"
+            formControlName="telefono"
+          />
+        </label>
+      </div>
+      <div class="input-blocks">
+        <label class="save-energy-input_from-block block_4">
+          <div class="cargo">
+            Cargo:<span
+              [ngStyle]="{
+                color: campoNoValido('cargo') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="text"
+            class="save-energy-input"
+            formControlName="cargo"
+          />
+        </label>
+        <label class="save-energy-input_from-block block_2">
+          <div class="correo">
+            Correo Electrónico:<span
+              [ngStyle]="{
+                color: campoNoValido('correo') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="email"
+            class="save-energy-input"
+            formControlName="correo"
+          />
+        </label>
+      </div>
+      <div class="input-blocks">
+        <label class="save-energy-input_from-block block_4">
+          <div class="constructora">
+            Constructora:<span
+              [ngStyle]="{
+                color: campoNoValido('constructora') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="text"
+            class="save-energy-input"
+            formControlName="constructora"
+          />
+        </label>
+        <label class="save-energy-input_from-block block_2">
+          <div class="proyectoInmobiliario">
+            Proyecto Inmobiliario:<span
+              [ngStyle]="{
+                color: campoNoValido('proyectoInmobiliario')
+                  ? '#f1480f'
+                  : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="email"
+            class="save-energy-input"
+            formControlName="proyectoInmobiliario"
+          />
+        </label>
+      </div>
+      <div class="input-blocks">
+        <label class="save-energy-input_from-block block_5">
+          <div class="potenciaNecesaria">
+            Potencia Necesaria (kW):<span
+              [ngStyle]="{
+                color: campoNoValido('potenciaNecesaria')
+                  ? '#f1480f'
+                  : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="number"
+            class="save-energy-input"
+            formControlName="potenciaNecesaria"
+          />
+        </label>
+      </div>
+      <div class="input-blocks">
+        <div class="save-energy-input_from-checkbox">
+          <input
+            type="checkbox"
+            name="acepta-info"
+            id="acepta-info"
+            formControlName="aceptaInfo"
+          />
+          <label for="acepta-info" class="save-energy-checkbox_label"
+            >Acepto recibir información de SUNNER relacionada a sus
+            servicios.</label
+          >
+        </div>
+      </div>
+      <div class="input-blocks">
+        <button
+          type="submit"
+          class="save-energy-submit-button"
+          [disabled]="bonoVerdeForm.pending"
+        >
+          ENVIAR
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
