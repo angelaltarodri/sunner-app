@@ -77,6 +77,8 @@ export class DialogFormComponent {
 
     // Resetea el form
     this.dialogForm.reset();
+
+    this.dialogRef.close();
   }
 
   mostrarSnackBar(mensaje: string, boton: string) {

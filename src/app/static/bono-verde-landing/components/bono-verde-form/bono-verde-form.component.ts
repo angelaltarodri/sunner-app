@@ -95,13 +95,13 @@ export class BonoVerdeFormComponent {
     );
 
     // Invoca al servicio de Google
-    this.googleFormService.submitFormAhorra(data).subscribe(
+    this.googleFormService.submitFormVivienda(data).subscribe(
       (response) => console.log('Success!', response),
       (error) => console.error('Error!', error.message)
     );
 
     // Envia la información al componente padre para su posterior uso.
-    this.energyForm.emit(this.bonoVerdeForm.value.rangoPagoMensual);
+    this.energyForm.emit(this.bonoVerdeForm.value.potenciaNecesaria);
 
     // Resetea el form
     this.bonoVerdeForm.reset();
