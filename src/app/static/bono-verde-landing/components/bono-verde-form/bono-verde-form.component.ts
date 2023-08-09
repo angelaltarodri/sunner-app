@@ -1,9 +1,11 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service';
 import { ValidatorService } from 'src/app/shared/validator.service';
 import { RangoPagoMensual } from 'src/app/static/save-energy-landing/interfaces/rango-pago-mensual.interface';
+import { ThankYouComponent } from './thank-you/thank-you.component';
 
 @Component({
   selector: 'app-bono-verde-form',
@@ -14,19 +16,19 @@ export class BonoVerdeFormComponent {
   @Output() energyForm = new EventEmitter();
 
   bonoVerdeForm: FormGroup = this.fb.group({
-    nombres: [, [Validators.required, Validators.minLength(3)]],
+    nombres: ['123', [Validators.required, Validators.minLength(3)]],
     correo: [
-      ,
+      'angelaltarodri@gmail.com',
       [
         Validators.required,
         Validators.pattern(this.validatorService.emailPattern),
       ],
     ],
-    telefono: [, [Validators.required, Validators.minLength(7)]],
-    cargo: [, [Validators.required]],
-    constructora: [, [Validators.required]],
-    proyectoInmobiliario: [, [Validators.required]],
-    potenciaNecesaria: [, [Validators.required]],
+    telefono: ['1234123412', [Validators.required, Validators.minLength(7)]],
+    cargo: ['CEO', [Validators.required]],
+    constructora: ['alalal', [Validators.required]],
+    proyectoInmobiliario: ['32414321fasd', [Validators.required]],
+    potenciaNecesaria: ['1234123412', [Validators.required]],
     aceptaInfo: [],
   });
 
@@ -34,7 +36,8 @@ export class BonoVerdeFormComponent {
     private fb: FormBuilder,
     private validatorService: ValidatorService,
     private googleFormService: GoogleFormService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private dialog: MatDialog
   ) {}
 
   campoNoValido(campo: string) {
@@ -105,6 +108,12 @@ export class BonoVerdeFormComponent {
 
     // Resetea el form
     this.bonoVerdeForm.reset();
+
+    // abre dialog de agradecimiento
+    this.dialog.open(ThankYouComponent, {
+      width: '59%',
+      data: data,
+    });
   }
 
   mostrarSnackBar(mensaje: string, boton: string) {

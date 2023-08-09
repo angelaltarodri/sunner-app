@@ -1,0 +1,86 @@
+.thank-you-bonoVivienda {
+  background: rgba(255, 255, 255, 0.9);
+  font-size: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  padding: 20px;
+  box-sizing: border-box;
+
+  color: #00346d;
+
+  height: 437px;
+  @media (max-width: 1194px) {
+    font-size: 28px;
+    height: 400px;
+  }
+  @media (max-width: 600px) {
+    font-size: 13px;
+    height: 200px;
+  }
+  .title {
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 40px;
+    @media (max-width: 1194px) {
+      max-width: 560px;
+      font-size: 28px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 24px;
+      max-width: 460px;
+      margin-bottom: 25px;
+    }
+    @media (max-width: 600px) {
+      font-size: 15px;
+      margin-bottom: 15px;
+    }
+  }
+  .message {
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+
+    max-width: 643px;
+
+    margin-bottom: 66px;
+    @media (max-width: 1194px) {
+      margin-bottom: 40px;
+      font-size: 22px;
+      max-width: 560px;
+    }
+    @media (max-width: 1000px) {
+      max-width: 460px;
+    }
+    @media (max-width: 600px) {
+      margin-bottom: 24px;
+      font-size: 11px;
+    }
+  }
+  .volver {
+    width: 152px;
+    height: 50px;
+    background-color: #ffbf4b;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      width: 72px;
+      height: 24px;
+      font-size: 11px;
+    }
+  }
+}
