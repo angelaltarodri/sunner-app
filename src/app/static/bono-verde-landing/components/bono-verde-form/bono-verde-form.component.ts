@@ -16,19 +16,19 @@ export class BonoVerdeFormComponent {
   @Output() energyForm = new EventEmitter();
 
   bonoVerdeForm: FormGroup = this.fb.group({
-    nombres: ['123', [Validators.required, Validators.minLength(3)]],
+    nombres: [, [Validators.required, Validators.minLength(3)]],
     correo: [
-      'angelaltarodri@gmail.com',
+      ,
       [
         Validators.required,
         Validators.pattern(this.validatorService.emailPattern),
       ],
     ],
-    telefono: ['1234123412', [Validators.required, Validators.minLength(7)]],
-    cargo: ['CEO', [Validators.required]],
-    constructora: ['alalal', [Validators.required]],
-    proyectoInmobiliario: ['32414321fasd', [Validators.required]],
-    potenciaNecesaria: ['1234123412', [Validators.required]],
+    telefono: [, [Validators.required, Validators.minLength(7)]],
+    cargo: [, [Validators.required]],
+    constructora: [, [Validators.required]],
+    proyectoInmobiliario: [, [Validators.required]],
+    potenciaNecesaria: [[Validators.required]],
     aceptaInfo: [],
   });
 
