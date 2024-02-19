@@ -12,12 +12,12 @@ export class ResidencialLandingComponent {
 
   constructor(private dialog: MatDialog) {}
 
-  @HostListener('window:scroll', ['$event'])
-  onScroll(event: Event) {
-    if (!this.hasExecuted) {
-      this.showPopUpForm();
-    }
-  }
+  // @HostListener('window:scroll', ['$event'])
+  // onScroll(event: Event) {
+  //   if (!this.hasExecuted) {
+  //     this.showPopUpForm();
+  //   }
+  // }
 
   showPopUpForm() {
     const windowHeight = window.innerHeight;

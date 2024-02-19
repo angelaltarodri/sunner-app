@@ -1,0 +1,344 @@
+a {
+  text-decoration: none;
+  color: #051d3b;
+}
+.cta {
+  -webkit-tap-highlight-color: transparent;
+
+  background-image: url("./../../../../../assets/static/residencial-landing/residencialmain.webp");
+
+  background-position: top center;
+  background-size: cover;
+  min-height: 100vh;
+
+  @media (max-width: 535px) {
+    min-height: 600px;
+    background-position: bottom bottom;
+  }
+
+  z-index: 1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .top-shade {
+    z-index: 2;
+    position: absolute;
+    height: 50vh;
+    width: 100%;
+    top: 0;
+
+    background: linear-gradient(
+      180deg,
+      #609ccf 11.74%,
+      rgba(96, 156, 207, 0) 73.37%
+    );
+    @media (max-width: 535px) {
+      height: 25vh;
+    }
+  }
+
+  .cta-header {
+    width: 88.6%;
+    max-width: 1276px;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 49px;
+    margin-top: 59px;
+    @media (max-width: 535px) {
+      margin-top: 29px;
+    }
+    .sunner-logo {
+      height: 49px;
+      @media (max-width: 2000px) {
+        height: 38.09px;
+      }
+      @media (max-width: 1200px) {
+        height: 38.09px;
+      }
+      @media (max-width: 800px) {
+        height: 21px;
+      }
+      @media (max-width: 535px) {
+        height: 13px;
+      }
+    }
+    .links {
+      display: flex;
+      gap: 60px;
+      font-weight: 500;
+      font-size: 28px;
+      color: #051d3b;
+      letter-spacing: 0.1em;
+      &:hover {
+        cursor: pointer;
+      }
+      @media (max-width: 800px) {
+        gap: 22px;
+      }
+      .link {
+        @media (max-width: 2000px) {
+          font-size: 20px;
+        }
+        @media (max-width: 1500px) {
+          font-size: 14px;
+        }
+        @media (max-width: 800px) {
+          font-size: 12px;
+        }
+        @media (max-width: 535px) {
+          font-size: 8px;
+        }
+      }
+    }
+    .bono-mivivienda {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      span {
+        transform: scale(0.8);
+      }
+    }
+  }
+  .cta-body {
+    width: 90%;
+    height: calc(100vh - 200px);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .cta_container {
+      display: flex;
+      justify-content: space-around;
+
+      background-color: #ffffffc0;
+      border-radius: 50px;
+      height: 470px;
+      max-width: 1261px;
+      width: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+
+      @media (max-width: 800px) {
+        flex-direction: column;
+        height: min-content;
+        align-items: center;
+      }
+
+      .texto {
+        max-width: 490px;
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        @media (max-width: 800px) {
+          width: 90%;
+          max-width: 500px;
+        }
+        .titulo {
+          width: 100%;
+
+          text-align: start;
+          position: relative;
+          z-index: 2;
+          font-weight: 300;
+          font-size: 50px;
+          color: #051d3b;
+          @media (max-width: 2000px) {
+            font-size: 40px;
+          }
+          @media (max-width: 1500px) {
+            font-size: 30px;
+          }
+          @media (max-width: 800px) {
+            font-size: 23px;
+            text-align: center;
+          }
+          @media (max-width: 630px) {
+            margin-top: 8vh;
+            font-size: 19px;
+          }
+          @media (max-width: 535px) {
+            margin-top: 5.5vh;
+            font-size: 16px;
+          }
+
+          span {
+            font-weight: 600;
+          }
+        }
+        .subtitulo {
+          position: relative;
+          color: #051d3b;
+          font-size: 27px;
+          font-weight: 300;
+          margin-top: 2vh;
+          text-align: start;
+          @media (max-width: 2000px) {
+            font-size: 25px;
+          }
+          @media (max-width: 1500px) {
+            font-size: 20px;
+          }
+          @media (max-width: 800px) {
+            font-size: 14px;
+            text-align: center;
+          }
+          @media (max-width: 535px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .formulario {
+        width: 45%;
+        max-width: 378px;
+        @media (max-width: 800px) {
+          width: 90%;
+          max-width: 500px;
+        }
+        .form-dialog-container {
+          margin-bottom: 50px;
+          width: 100%;
+          @media (max-width: 660px) {
+            max-width: 100%;
+          }
+          @media (max-width: 560px) {
+            max-width: 100%;
+          }
+          @media (max-width: 425px) {
+            max-width: 100%;
+          }
+
+          form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .form {
+              margin-top: 30px;
+              width: 100%;
+              color: #00346d;
+
+              box-sizing: border-box;
+
+              display: flex;
+              flex-direction: column;
+              gap: 20px;
+              .input-dialog-form {
+                display: flex;
+                flex-direction: column;
+                label {
+                  font-size: 18px;
+                  font-weight: 500;
+                  span {
+                    color: #a60000;
+                  }
+                  @media (max-width: 660px) {
+                    font-size: 20px;
+                  }
+                  @media (max-width: 560px) {
+                    font-size: 15px;
+                  }
+                }
+                input {
+                  height: 42px;
+                  font-size: 20px;
+                  padding-left: 20px;
+                  box-sizing: border-box;
+                  border: 2px solid #ffbf4b;
+                  @media (max-width: 660px) {
+                    font-size: 20px;
+                    height: 38px;
+                  }
+                  @media (max-width: 560px) {
+                    font-size: 15px;
+                    height: 30px;
+                  }
+                }
+              }
+            }
+            button[type="submit"] {
+              max-width: 249px;
+              width: 90%;
+              height: 50px;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              background: #ffbf4b;
+              border: none;
+              margin-top: 50px;
+              &:hover {
+                cursor: pointer;
+              }
+              @media (max-width: 660px) {
+                height: 40px;
+              }
+              @media (max-width: 560px) {
+                height: 32px;
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.no-valid-shake {
+  -webkit-animation: shake-horizontal 0.5s linear both;
+  animation: shake-horizontal 0.5s linear both;
+}
+
+@-webkit-keyframes shake-horizontal {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}
+@keyframes shake-horizontal {
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+
+  70% {
+    -webkit-transform: translateX(-10px);
+    transform: translateX(-10px);
+  }
+  60% {
+    -webkit-transform: translateX(10px);
+    transform: translateX(10px);
+  }
+  80% {
+    -webkit-transform: translateX(8px);
+    transform: translateX(8px);
+  }
+  90% {
+    -webkit-transform: translateX(-8px);
+    transform: translateX(-8px);
+  }
+}

@@ -1,0 +1,117 @@
+<div class="cta">
+  <div class="top-shade"></div>
+  <div class="cta-header">
+    <a href="/">
+      <img
+        src="./../../../../../assets/static/residencial-landing/sunner.webp"
+        alt=""
+        class="sunner-logo"
+      />
+    </a>
+    <div class="links">
+      <div class="link nosotros">
+        <!-- NOSOTROS -->
+      </div>
+      <div class="link empresas">
+        <!-- EMPRESAS -->
+      </div>
+      <!-- <a href="/bono-verde" class="link bono-mivivienda"
+        ><span>BONO</span> MIVIVIENDA</a
+      > -->
+      <div class="link noticias">
+        <!-- NOTICIAS -->
+      </div>
+    </div>
+  </div>
+  <div class="cta-body">
+    <div class="cta_container">
+      <div class="texto">
+        <div class="titulo">
+          Reduce el monto de tu boleta de luz utilizando
+          <span> paneles solares.</span>
+        </div>
+        <div class="subtitulo">
+          Desde 2000 dólares puedes comenzar a utilizar energías renovables.
+        </div>
+      </div>
+      <div class="formulario">
+        <div class="form-dialog-container">
+          <form [formGroup]="dialogForm" (ngSubmit)="submitDialogForm()">
+            <div class="form">
+              <div class="input-dialog-form nombre">
+                <label for="nombre"
+                  >Nombre:
+                  <span
+                    [ngStyle]="{
+                      color: campoNoValido('nombre') ? '#f1480f' : '#ffbf4b'
+                    }"
+                    >*</span
+                  >
+                </label>
+                <input
+                  id="nombre"
+                  name="nombre"
+                  type="text"
+                  formControlName="nombre"
+                  [ngStyle]="{
+                    border: campoNoValido('nombre')
+                      ? '2px solid red'
+                      : '2px solid #ffbf4b'
+                  }"
+                />
+              </div>
+              <div class="input-dialog-form email">
+                <label for="email"
+                  >Correo Electrónico:
+                  <span
+                    [ngStyle]="{
+                      color: campoNoValido('email') ? '#f1480f' : '#ffbf4b'
+                    }"
+                    >*</span
+                  >
+                </label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  formControlName="email"
+                  [ngStyle]="{
+                    border: campoNoValido('email')
+                      ? '2px solid red'
+                      : '2px solid #ffbf4b'
+                  }"
+                />
+              </div>
+              <div class="input-dialog-form whatsapp">
+                <label for="whatsapp"
+                  >Telefono:
+                  <span
+                    [ngStyle]="{
+                      color: campoNoValido('whatsapp') ? '#f1480f' : '#ffbf4b'
+                    }"
+                    >*</span
+                  >
+                </label>
+                <input
+                  id="whatsapp"
+                  name="whatsapp"
+                  type="text"
+                  formControlName="whatsapp"
+                  [ngStyle]="{
+                    border: campoNoValido('whatsapp')
+                      ? '2px solid red'
+                      : '2px solid #ffbf4b'
+                  }"
+                />
+              </div>
+            </div>
+
+            <button type="submit" [disabled]="dialogForm.pending">
+              COTIZA TU PROYECTO
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

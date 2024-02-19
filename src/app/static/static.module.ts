@@ -28,6 +28,7 @@ import { BonoVerdeFormComponent } from './bono-verde-landing/components/bono-ver
 import { AlboradaProyectComponent } from './bono-verde-landing/components/alborada-proyect/alborada-proyect.component';
 import { DudasComponent } from './bono-verde-landing/dudas/dudas.component';
 import { ThankYouComponent } from './bono-verde-landing/components/bono-verde-form/thank-you/thank-you.component';
+import { CtaFormComponent } from './residencial-landing/components/cta-form/cta-form.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { ThankYouComponent } from './bono-verde-landing/components/bono-verde-fo
     ThankYouPageComponent,
     ResidencialLandingComponent,
     CtaComponent,
+    CtaFormComponent,
     PasosComponent,
     OfrecemosComponent,
     FaqComponent,
