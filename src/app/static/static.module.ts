@@ -32,6 +32,7 @@ import { CtaFormComponent } from './residencial-landing/components/cta-form/cta-
 import { LoadingDialogComponent } from './residencial-landing/components/loading-dialog/loading-dialog.component';
 import { FaqFormComponent } from './residencial-landing/components/faq-form/faq-form.component';
 import { BonoVerdeForm2Component } from './bono-verde-landing/components/bono-verde-form2/bono-verde-form2.component';
+import { LastFormVerdeComponent } from './bono-verde-landing/components/last-form-verde/last-form-verde.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { BonoVerdeForm2Component } from './bono-verde-landing/components/bono-ve
     DudasComponent,
     ThankYouComponent,
     LoadingDialogComponent,
+    LastFormVerdeComponent,
   ],
   imports: [
     StaticRoutingModule,

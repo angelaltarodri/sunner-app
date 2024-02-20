@@ -1,0 +1,115 @@
+<div class="save-energy-form">
+  <div class="filtro-azul"></div>
+
+  <div class="save-energy-form-container">
+    <div class="save-energy-title_up">
+      Nuestro equipo está <span>capacitado</span> para resolver todas sus
+      inquietudes y preguntas sobre energías solar.
+    </div>
+
+    <form
+      class="save-energy-form-body"
+      [formGroup]="bonoVerdeForm"
+      (ngSubmit)="submitBonoVerdeForm()"
+    >
+      <div class="input-blocks">
+        <label class="save-energy-input_from-block block_1">
+          <div class="nombres">
+            Nombre:<span
+              [ngStyle]="{
+                color: campoNoValido('nombres') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="text"
+            class="save-energy-input"
+            formControlName="nombres"
+          />
+        </label>
+        <label class="save-energy-input_from-block block_3">
+          <div class="telefono">
+            Telefono:<span
+              [ngStyle]="{
+                color: campoNoValido('telefono') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="text"
+            pattern="[0-9+-]*"
+            maxlength="12"
+            class="save-energy-input"
+            formControlName="telefono"
+          />
+        </label>
+      </div>
+      <div class="input-blocks">
+        <label class="save-energy-input_from-block block_2">
+          <div class="correo">
+            Correo Electrónico:<span
+              [ngStyle]="{
+                color: campoNoValido('correo') ? '#f1480f' : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="email"
+            class="save-energy-input"
+            formControlName="correo"
+          />
+        </label>
+      </div>
+
+      <div class="input-blocks">
+        <label class="save-energy-input_from-block block_5">
+          <div class="potenciaNecesaria">
+            Detalles:<span
+              [ngStyle]="{
+                color: campoNoValido('potenciaNecesaria')
+                  ? '#f1480f'
+                  : '#ffbf4b'
+              }"
+            >
+              *</span
+            >
+          </div>
+          <input
+            type="text"
+            class="save-energy-input"
+            formControlName="detalles"
+          />
+        </label>
+      </div>
+      <div class="input-blocks">
+        <div class="save-energy-input_from-checkbox">
+          <input
+            type="checkbox"
+            name="acepta-info"
+            id="acepta-info"
+            formControlName="aceptaInfo"
+          />
+          <label for="acepta-info" class="save-energy-checkbox_label"
+            >Acepto recibir información de SUNNER relacionada a sus
+            servicios.</label
+          >
+        </div>
+      </div>
+      <div class="input-blocks">
+        <button
+          type="submit"
+          class="save-energy-submit-button"
+          [disabled]="bonoVerdeForm.pending"
+        >
+          COTIZA TU PROYECTO
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
