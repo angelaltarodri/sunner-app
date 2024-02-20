@@ -117,3 +117,10 @@ body {
 .mat-mdc-dialog-container .mdc-dialog__surface {
   box-shadow: none !important;
 }
+
+.main-landing {
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    background-color: transparent !important;
+    border-radius: 20px;
+  }
+}

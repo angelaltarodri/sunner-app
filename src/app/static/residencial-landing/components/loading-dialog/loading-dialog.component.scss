@@ -1,0 +1,72 @@
+:host {
+  display: block;
+  background-color: white;
+  height: min-content;
+  text-align: center;
+  width: 300px;
+  padding: 30px;
+  border-radius: 20px;
+  margin: auto;
+
+  .cancelar-dialog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    text-align: center;
+    .title {
+      color: #3a4771;
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      @media (max-width: 460px) {
+        font-size: 20px;
+      }
+    }
+    .description {
+      font-size: 16px;
+      font-weight: 300;
+      margin-bottom: 40px;
+      @media (max-width: 470px) {
+        font-size: 12px;
+        line-height: 18px;
+        margin-bottom: 20px;
+      }
+    }
+    .buttons {
+      display: flex;
+      gap: 22px;
+      align-items: flex-end;
+
+      @media (max-width: 470px) {
+        flex-direction: column;
+        gap: 20px;
+        > button {
+          width: 180px;
+        }
+      }
+
+      > button {
+        height: 40px;
+        padding: 6px 16px 8px 16px;
+        border: none;
+        border-radius: 8px;
+        color: white;
+      }
+      .btn-cancelar {
+        background-color: rgb(255, 132, 0);
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .btn-entrar {
+        background-color: #1ea1a1;
+        &:hover {
+          filter: brightness(0.75);
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

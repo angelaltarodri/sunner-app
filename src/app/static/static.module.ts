@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MainLandingComponent } from './main-landing/main-landing.component';
 import { StaticRoutingModule } from './static-routing.module';
@@ -29,6 +29,7 @@ import { AlboradaProyectComponent } from './bono-verde-landing/components/albora
 import { DudasComponent } from './bono-verde-landing/dudas/dudas.component';
 import { ThankYouComponent } from './bono-verde-landing/components/bono-verde-form/thank-you/thank-you.component';
 import { CtaFormComponent } from './residencial-landing/components/cta-form/cta-form.component';
+import { LoadingDialogComponent } from './residencial-landing/components/loading-dialog/loading-dialog.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { CtaFormComponent } from './residencial-landing/components/cta-form/cta-
     AlboradaProyectComponent,
     DudasComponent,
     ThankYouComponent,
+    LoadingDialogComponent,
   ],
   imports: [
     StaticRoutingModule,

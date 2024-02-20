@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Router } from '@angular/router';
 import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service';
 import { ValidatorService } from 'src/app/shared/validator.service';
+import { LoadingDialogComponent } from '../loading-dialog/loading-dialog.component';
 
 @Component({
   selector: 'app-cta-form',
@@ -26,7 +29,9 @@ export class CtaFormComponent {
     private fb: FormBuilder,
     private validatorService: ValidatorService,
     private googleFormService: GoogleFormService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private router: Router,
+    private dialog: MatDialog
   ) {}
 
   campoNoValido(campo: string) {
@@ -59,6 +64,13 @@ export class CtaFormComponent {
       return;
     }
 
+    const loading = this.dialog.open(LoadingDialogComponent, {
+      maxWidth: '360px',
+      panelClass: 'main-landing',
+      width: '90vw',
+      disableClose: true,
+    });
+
     const data = new FormData();
     data.append('Time', new Date().toString());
     data.append('Name', this.dialogForm.value.nombre);
@@ -67,10 +79,17 @@ export class CtaFormComponent {
     data.append('URL', 'dialog-form');
 
     // Invoca al servicio de Google
-    this.googleFormService.submitFormDialog(data).subscribe(
-      (response) => console.log('Success!', response),
-      (error) => console.error('Error!', error.message)
-    );
+    this.googleFormService.submitFormDialog(data).subscribe({
+      next: (response) => {
+        console.log('Success!', response);
+        this.router.navigateByUrl('/thanks');
+        loading.close();
+      },
+      error: (error) => {
+        console.error('Error!', error.message);
+        loading.close();
+      },
+    });
 
     // Resetea el form
     this.dialogForm.reset();

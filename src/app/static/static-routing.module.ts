@@ -4,6 +4,7 @@ import { MainLandingComponent } from './main-landing/main-landing.component';
 import { SaveEnergyLandingComponent } from './save-energy-landing/save-energy-landing.component';
 import { ResidencialLandingComponent } from './residencial-landing/residencial-landing.component';
 import { BonoVerdeLandingComponent } from './bono-verde-landing/bono-verde-landing.component';
+import { ThanksResidencialComponent } from './thanks-residencial/thanks-residencial.component';
 
 const routes: Routes = [
   {
@@ -20,6 +21,10 @@ const routes: Routes = [
       {
         path: 'bono-verde',
         component: BonoVerdeLandingComponent,
+      },
+      {
+        path: 'thanks',
+        component: ThanksResidencialComponent,
       },
     ],
   },

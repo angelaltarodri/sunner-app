@@ -5,6 +5,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { DialogModule } from '@angular/cdk/dialog';
 import { MatDialogModule } from '@angular/material/dialog';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatSliderModule } from '@angular/material/slider';
+
 @NgModule({
   declarations: [],
   exports: [
@@ -15,6 +18,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     MatSnackBarModule,
     DialogModule,
     MatDialogModule,
+    MatProgressBarModule,
+    MatSliderModule,
   ],
 })
 export class MaterialModule {}
