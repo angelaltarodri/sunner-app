@@ -25,10 +25,10 @@ export class BonoVerdeFormComponent {
       ],
     ],
     telefono: [, [Validators.required, Validators.minLength(7)]],
-    cargo: [, [Validators.required]],
-    constructora: [, [Validators.required]],
-    proyectoInmobiliario: [, [Validators.required]],
-    potenciaNecesaria: [[Validators.required]],
+    cargo: ['', [Validators.required]],
+    constructora: ['', [Validators.required]],
+    proyectoInmobiliario: ['', [Validators.required]],
+    potenciaNecesaria: ['', [Validators.required]],
     aceptaInfo: [],
   });
 
