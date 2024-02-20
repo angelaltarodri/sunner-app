@@ -1,0 +1,329 @@
+.faq {
+  position: relative;
+  z-index: 3;
+  background-color: #1a3855;
+  min-height: 2229px;
+  display: flex;
+  justify-content: center;
+
+  @media (max-width: 1200px) {
+    min-height: 1770px;
+  }
+  @media (max-width: 800px) {
+    min-height: 930px;
+  }
+  @media (max-width: 535px) {
+    min-height: 920px;
+  }
+  .faq-container {
+    z-index: 3;
+    width: 88.6%;
+    max-width: 1276px;
+
+    height: 2000px;
+    background-color: white;
+    border-radius: 59px 59px 0px 0px;
+    margin-top: 127px;
+    color: #1a3855;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 123px;
+    box-sizing: border-box;
+    @media (max-width: 2000px) {
+      height: 2270px;
+    }
+    @media (max-width: 1200px) {
+      margin-top: 103px;
+      padding: 43px;
+      height: 2050px;
+    }
+    @media (max-width: 800px) {
+      padding: 53px;
+      height: 1540px;
+      border-radius: 40px 40px 0px 0px;
+    }
+    @media (max-width: 630px) {
+      padding: 40px;
+      margin-top: 103px;
+    }
+    @media (max-width: 535px) {
+      padding: 20px;
+      height: 1240px;
+      border-radius: 20px 20px 0px 0px;
+    }
+    @media (max-width: 445px) {
+      margin-top: 53px;
+    }
+    .faq-title {
+      font-size: 65px;
+      font-weight: 300;
+      height: min-content;
+      span {
+        font-weight: 600;
+      }
+      @media (max-width: 2000px) {
+        font-size: 45px;
+      }
+      @media (max-width: 1200px) {
+        font-size: 30px;
+      }
+      @media (max-width: 800px) {
+        font-size: 23px;
+      }
+      @media (max-width: 630px) {
+        font-size: 19px;
+      }
+      @media (max-width: 535px) {
+        font-size: 16px;
+      }
+    }
+    .faq-opciones {
+      margin-top: 20px;
+      width: 100%;
+
+      font-weight: 400;
+      letter-spacing: 0.05em;
+      font-size: 32px;
+
+      display: flex;
+      flex-direction: column;
+      @media (max-width: 2000px) {
+        font-size: 25px;
+      }
+      @media (max-width: 1200px) {
+        font-size: 22px;
+      }
+      @media (max-width: 800px) {
+        font-size: 13px;
+      }
+      @media (max-width: 630px) {
+        font-size: 10px;
+      }
+      .faq-opcion {
+        display: flex;
+        flex-direction: column;
+        border-bottom: 2px solid #37475c;
+
+        position: relative;
+
+        @media (max-width: 800px) {
+          border-bottom: 1px solid #37475c;
+        }
+        label {
+          &:hover {
+            cursor: pointer;
+          }
+          max-height: 120px;
+          transition: all 1s ease-in;
+
+          display: flex;
+          flex-direction: column;
+
+          overflow: hidden;
+          @media (max-width: 800px) {
+            max-height: 70px;
+          }
+          @media (max-width: 630px) {
+            max-height: 90px;
+          }
+          @media (max-width: 535px) {
+            max-height: 70px;
+          }
+          .label-title {
+            background-color: white;
+            z-index: 2;
+
+            height: 120px;
+
+            display: flex;
+            align-items: center;
+            flex-shrink: 0;
+            @media (max-width: 800px) {
+              height: 70px;
+            }
+            @media (max-width: 630px) {
+              height: 90px;
+            }
+            @media (max-width: 535px) {
+              height: 70px;
+            }
+          }
+          .label-description {
+            z-index: 1;
+            padding-bottom: 30px;
+            box-sizing: border-box;
+          }
+        }
+        &:last-child {
+          border-bottom: none;
+        }
+        .plus-sign {
+          &:hover {
+            cursor: pointer;
+          }
+          z-index: 2;
+          position: absolute;
+          right: 0px;
+          top: 40px;
+
+          border-radius: 50%;
+          width: 40px;
+          height: 40px;
+          @media (max-width: 5350px) {
+            height: 10px;
+          }
+
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          transform: rotate(0deg);
+          transition: transform 0.5s ease-in-out;
+
+          font-size: 30px;
+          @media (max-width: 800px) {
+            font-size: 23px;
+            top: 30px;
+          }
+        }
+      }
+      input[type="radio"] {
+        display: none;
+      }
+      input[type="radio"]:checked + label {
+        max-height: 700px;
+      }
+      input[type="radio"]:checked ~ .plus-sign {
+        transform: rotate(405deg);
+      }
+    }
+    .dudas {
+      z-index: 10;
+      position: absolute;
+      bottom: 170px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      @media (max-width: 2000px) {
+        bottom: 140px;
+      }
+      @media (max-width: 1200px) {
+        bottom: 120px;
+      }
+      @media (max-width: 800px) {
+        bottom: 60px;
+      }
+      .dudas-title {
+        font-weight: 3 00;
+        font-size: 36px;
+        text-align: center;
+        width: 80%;
+        max-width: 700px;
+        span {
+          font-weight: 800;
+        }
+        @media (max-width: 2000px) {
+          font-size: 30px;
+        }
+        @media (max-width: 1200px) {
+          font-size: 20px;
+        }
+        @media (max-width: 630px) {
+          font-size: 16px;
+        }
+        @media (max-width: 535px) {
+          font-size: 13px;
+        }
+      }
+      .form-dialog-container {
+        margin-bottom: 50px;
+        width: 80%;
+        @media (max-width: 660px) {
+          max-width: 700px;
+        }
+        @media (max-width: 560px) {
+          max-width: 700px;
+        }
+        @media (max-width: 425px) {
+          max-width: 700px;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          .form {
+            margin-top: 30px;
+            width: 100%;
+            color: #00346d;
+
+            box-sizing: border-box;
+
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            .input-dialog-form {
+              display: flex;
+              flex-direction: column;
+              label {
+                font-size: 20px;
+                font-weight: 500;
+                span {
+                  color: #a60000;
+                }
+                @media (max-width: 660px) {
+                  font-size: 20px;
+                }
+                @media (max-width: 560px) {
+                  font-size: 15px;
+                }
+              }
+              input {
+                height: 42px;
+                font-size: 20px;
+                padding-left: 20px;
+                box-sizing: border-box;
+                border: 2px solid #ffbf4b;
+                @media (max-width: 660px) {
+                  font-size: 20px;
+                  height: 38px;
+                }
+                @media (max-width: 560px) {
+                  font-size: 15px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+          button[type="submit"] {
+            max-width: 249px;
+            width: 90%;
+            height: 50px;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            background: #ffbf4b;
+            border: none;
+            margin-top: 50px;
+            &:hover {
+              cursor: pointer;
+            }
+            @media (max-width: 660px) {
+              height: 40px;
+            }
+            @media (max-width: 560px) {
+              height: 32px;
+              font-size: 15px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

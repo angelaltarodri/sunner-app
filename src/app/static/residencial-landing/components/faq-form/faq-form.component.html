@@ -1,0 +1,240 @@
+<div class="faq">
+  <div class="faq-container">
+    <div class="faq-title">Preguntas <span>Frecuentes</span></div>
+    <div class="faq-opciones">
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="queespanelsolar"
+          name="pregunta"
+          [checked]="isCheckedMap['queespanelsolar']"
+        />
+        <label class="faq-pregunta" for="queespanelsolar">
+          <div class="label-title">¿QUÉ ES UN PANEL SOLAR?</div>
+          <div class="label-description">
+            Los paneles solares son dispositivos que transforman la energía
+            solar en electricidad, siendo versátiles y adecuados para diversos
+            usos, desde industrial hasta residencial.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'queespanelsolar')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="quetiposdesistemas"
+          name="pregunta"
+          [checked]="isCheckedMap['quetiposdesistemas']"
+        />
+        <label class="faq-pregunta" for="quetiposdesistemas">
+          <div class="label-title">
+            {{ "¿Qué tipos de sistemas existen?" | uppercase }}
+          </div>
+          <div class="label-description">
+            Son tres tipos principalmente, conectados a la red eléctrica,
+            aislados de la red eléctrica, e híbridos. Esto determina si el
+            sistema necesita o no baterías.
+          </div>
+        </label>
+        <div
+          class="plus-sign"
+          (click)="closeRadio($event, 'quetiposdesistemas')"
+        >
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="queesongrid"
+          name="pregunta"
+          [checked]="isCheckedMap['queesongrid']"
+        />
+        <label class="faq-pregunta" for="queesongrid">
+          <div class="label-title">
+            {{ "¿Qué es un sistema “On Grid”?" | uppercase }}
+          </div>
+          <div class="label-description">
+            El sistema conectado a la red no cuenta con un sistema de
+            almacenamiento (baterías), por lo que es necesario consumir la
+            energía inmediatamente.
+            <br />
+            <br />
+            Todas las actividades fuera del horario de producción solar son
+            abastecidas por la red eléctrica regular, por lo que podemos decir
+            que el Sistema On Grid funciona “en paralelo” con la red eléctrica
+            local.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'queesongrid')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="queesoffgrid"
+          name="pregunta"
+          [checked]="isCheckedMap['queesoffgrid']"
+        />
+        <label class="faq-pregunta" for="queesoffgrid">
+          <div class="label-title">
+            {{ "¿Qué es un sistema “Off Grid”?" | uppercase }}
+          </div>
+          <div class="label-description">
+            Los sistemas aislados están desconectados de la red, lo cual
+            significa que el abastecimiento de energía eléctrica se apoya
+            completamente en los paneles solares, por lo que las baterías son
+            necesarias como elemento de almacenamiento de energía.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'queesoffgrid')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="queeshibrido"
+          name="pregunta"
+          [checked]="isCheckedMap['queeshibrido']"
+        />
+        <label class="faq-pregunta" for="queeshibrido">
+          <div class="label-title">
+            {{ "¿Qué es un sistema híbrido?" | uppercase }}
+          </div>
+          <div class="label-description">
+            Podemos conceptualizar al sistema híbrido como un Sistema Off Grid
+            que cuenta con el soporte de la red eléctrica regular como backup.
+            Esto significa que los paneles abastecerán de energía las
+            actividades realizadas durante el día y la noche de acuerdo al
+            almacenamiento disponible.
+          </div>
+        </label>
+        <div class="plus-sign" (click)="closeRadio($event, 'queeshibrido')">
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <input
+          type="radio"
+          id="cualessonloscriterios"
+          name="pregunta"
+          [checked]="isCheckedMap['cualessonloscriterios']"
+        />
+        <label class="faq-pregunta" for="cualessonloscriterios">
+          <div class="label-title">
+            {{ "¿Cuáles son los criterios del diseño solar?" | uppercase }}
+          </div>
+          <div class="label-description">
+            Los requisitos para instalar paneles solares en casas y edificios
+            son simples, con énfasis en la accesibilidad al techo para facilitar
+            la circulación y el montaje manual de los paneles. <br />
+            <br />
+
+            Al instalar paneles solares, es crucial tener en cuenta el espacio
+            requerido, alrededor de 2 metros cuadrados por panel, así como
+            seleccionar una ubicación en el techo sin sombra de edificios,
+            árboles u otros elementos cercanos
+          </div>
+        </label>
+        <div
+          class="plus-sign"
+          (click)="closeRadio($event, 'cualessonloscriterios')"
+        >
+          +
+        </div>
+      </div>
+      <div class="faq-opcion">
+        <label class="faq-pregunta" class="faq-pregunta">
+          <div class="label-title"></div>
+          <div class="label-description"></div>
+        </label>
+      </div>
+    </div>
+    <div class="dudas">
+      <div class="dudas-title">
+        Nuestro equipo esta <span>capacitado</span> para resolver todas sus
+        inquietudes y preguntas sobre energía solar.
+      </div>
+      <div class="form-dialog-container">
+        <form [formGroup]="dialogForm" (ngSubmit)="submitDialogForm()">
+          <div class="form">
+            <div class="input-dialog-form nombre">
+              <label for="nombre"
+                >Nombre:
+                <span
+                  [ngStyle]="{
+                    color: campoNoValido('nombre') ? '#f1480f' : '#ffbf4b'
+                  }"
+                  >*</span
+                >
+              </label>
+              <input
+                id="nombre"
+                name="nombre"
+                type="text"
+                formControlName="nombre"
+                [ngStyle]="{
+                  border: campoNoValido('nombre')
+                    ? '2px solid red'
+                    : '2px solid #ffbf4b'
+                }"
+              />
+            </div>
+            <div class="input-dialog-form email">
+              <label for="email"
+                >Correo Electrónico:
+                <span
+                  [ngStyle]="{
+                    color: campoNoValido('email') ? '#f1480f' : '#ffbf4b'
+                  }"
+                  >*</span
+                >
+              </label>
+              <input
+                id="email"
+                name="email"
+                type="email"
+                formControlName="email"
+                [ngStyle]="{
+                  border: campoNoValido('email')
+                    ? '2px solid red'
+                    : '2px solid #ffbf4b'
+                }"
+              />
+            </div>
+            <div class="input-dialog-form whatsapp">
+              <label for="whatsapp"
+                >Telefono:
+                <span
+                  [ngStyle]="{
+                    color: campoNoValido('whatsapp') ? '#f1480f' : '#ffbf4b'
+                  }"
+                  >*</span
+                >
+              </label>
+              <input
+                id="whatsapp"
+                name="whatsapp"
+                type="text"
+                formControlName="whatsapp"
+                [ngStyle]="{
+                  border: campoNoValido('whatsapp')
+                    ? '2px solid red'
+                    : '2px solid #ffbf4b'
+                }"
+              />
+            </div>
+          </div>
+
+          <button type="submit" [disabled]="dialogForm.pending">
+            COTIZA TU PROYECTO
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

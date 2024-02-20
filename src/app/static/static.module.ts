@@ -30,6 +30,7 @@ import { DudasComponent } from './bono-verde-landing/dudas/dudas.component';
 import { ThankYouComponent } from './bono-verde-landing/components/bono-verde-form/thank-you/thank-you.component';
 import { CtaFormComponent } from './residencial-landing/components/cta-form/cta-form.component';
 import { LoadingDialogComponent } from './residencial-landing/components/loading-dialog/loading-dialog.component';
+import { FaqFormComponent } from './residencial-landing/components/faq-form/faq-form.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +51,7 @@ import { LoadingDialogComponent } from './residencial-landing/components/loading
     PasosComponent,
     OfrecemosComponent,
     FaqComponent,
+    FaqFormComponent,
     ProyectosComponent,
     VerMasDialogComponent,
     DialogFormComponent,
