@@ -29,7 +29,7 @@ export class LastFormVerdeComponent {
     proyectoInmobiliario: ['-', [Validators.required]],
     potenciaNecesaria: ['-'],
     detalles: [''],
-    aceptaInfo: [],
+    aceptaInfo: [''],
   });
 
   constructor(

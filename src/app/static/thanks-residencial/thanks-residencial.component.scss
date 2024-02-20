@@ -5,7 +5,7 @@ a {
 .cta {
   -webkit-tap-highlight-color: transparent;
 
-  background-image: url("./../../../assets/static/thanks-residencial/thank_you_residencial.png");
+  background-image: url("./../../../assets/static/thanks-residencial/thank_you_residencial.webp");
 
   background-position: top center;
   background-size: cover;
@@ -195,6 +195,9 @@ a {
           @media (max-width: 800px) {
             justify-content: center;
           }
+          &:hover {
+            cursor: pointer;
+          }
           img {
             width: 38px;
             height: 38px;
@@ -208,6 +211,9 @@ a {
             }
           }
           .btn_whatsapp {
+            &:hover {
+              cursor: pointer;
+            }
             height: 53px;
             width: 331px;
             background-color: #00346d;

@@ -5,7 +5,7 @@ a {
 .cta {
   -webkit-tap-highlight-color: transparent;
 
-  background-image: url("./../../../assets/static/thanks-inmob/thank_inmob.png");
+  background-image: url("./../../../assets/static/thanks-inmob/thank_inmob.webp");
 
   background-position: top center;
   background-size: cover;
@@ -190,6 +190,9 @@ a {
           }
         }
         .whatsapp_btns {
+          &:hover {
+            cursor: pointer;
+          }
           margin-top: 20px;
           display: flex;
           gap: 20px;
@@ -210,6 +213,9 @@ a {
             }
           }
           .btn_whatsapp {
+            &:hover {
+              cursor: pointer;
+            }
             height: 53px;
             width: 331px;
             background-color: white;
