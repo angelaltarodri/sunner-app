@@ -2,13 +2,13 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 
-import { environment } from '../../../environments/environment';
-import { PlantInfo } from '../interfaces/plantInfo.interface';
-import { PlantList } from '../interfaces/plantList.interface';
-import { PlantDashboardHour } from '../interfaces/plantDashboardHour.interface';
-import { PlantTimespan } from '../enum/plantTimespan.enum';
-import { PlantDashboardDay } from '../interfaces/plantDashboardDay.interface';
-import { PlantDashboardYear } from '../interfaces/plantDashboardYear.interface';
+import { environment } from '../environments/environment';
+import { PlantInfo } from '../app/dashboard/interfaces/plantInfo.interface';
+import { PlantList } from '../app/dashboard/interfaces/plantList.interface';
+import { PlantDashboardHour } from '../app/dashboard/interfaces/plantDashboardHour.interface';
+import { PlantTimespan } from '../app/dashboard/enum/plantTimespan.enum';
+import { PlantDashboardDay } from '../app/dashboard/interfaces/plantDashboardDay.interface';
+import { PlantDashboardYear } from '../app/dashboard/interfaces/plantDashboardYear.interface';
 
 @Injectable({
   providedIn: 'root',

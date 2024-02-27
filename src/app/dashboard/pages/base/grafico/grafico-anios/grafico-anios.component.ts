@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ChartDataSets, ChartOptions, ChartType } from 'chart.js';
 import { Label } from 'ng2-charts';
 import { PlantTimespan } from 'src/app/dashboard/enum/plantTimespan.enum';
-import { PlantService } from 'src/app/dashboard/services/plant.service';
+import { PlantService } from 'src/services/plant.service';
 
 @Component({
   selector: 'app-grafico-anios',

@@ -7,6 +7,7 @@ import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service
 import { ValidatorService } from 'src/app/shared/validator.service';
 import { LoadingDialogComponent } from 'src/app/static/residencial-landing/components/loading-dialog/loading-dialog.component';
 import { RangoPagoMensual } from 'src/app/static/save-energy-landing/interfaces/rango-pago-mensual.interface';
+import { EmailJSService } from 'src/services/email-js.service';
 
 @Component({
   selector: 'app-last-form-verde',
@@ -38,7 +39,8 @@ export class LastFormVerdeComponent {
     private googleFormService: GoogleFormService,
     private snackBar: MatSnackBar,
     private dialog: MatDialog,
-    private router: Router
+    private router: Router,
+    private emailJSService: EmailJSService
   ) {}
 
   campoNoValido(campo: string) {
@@ -120,7 +122,15 @@ export class LastFormVerdeComponent {
     });
 
     // Resetea el form
-    this.bonoVerdeForm.reset();
+    // this.bonoVerdeForm.reset();
+
+    this.emailJSService.sendFeedback({
+      formulario: 'Vivienda Form',
+      nombres: this.bonoVerdeForm.value.nombres,
+      correo: this.bonoVerdeForm.value.correo,
+      telefono: this.bonoVerdeForm.value.telefono,
+      detalles: this.bonoVerdeForm.value.detalles,
+    });
   }
 
   mostrarSnackBar(mensaje: string, boton: string) {

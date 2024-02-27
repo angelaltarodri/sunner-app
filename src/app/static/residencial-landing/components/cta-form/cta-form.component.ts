@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { GoogleFormService } from 'src/app/shared/googleForm/google-form.service';
 import { ValidatorService } from 'src/app/shared/validator.service';
 import { LoadingDialogComponent } from '../loading-dialog/loading-dialog.component';
+import { EmailJSService } from 'src/services/email-js.service';
 
 @Component({
   selector: 'app-cta-form',
@@ -31,7 +32,8 @@ export class CtaFormComponent {
     private googleFormService: GoogleFormService,
     private snackBar: MatSnackBar,
     private router: Router,
-    private dialog: MatDialog
+    private dialog: MatDialog,
+    private emailJSService: EmailJSService
   ) {}
 
   campoNoValido(campo: string) {
@@ -92,7 +94,15 @@ export class CtaFormComponent {
     });
 
     // Resetea el form
-    this.dialogForm.reset();
+    // this.dialogForm.reset();
+
+    this.emailJSService.sendFeedback({
+      formulario: 'Residencial Form',
+      nombres: this.dialogForm.value.nombre,
+      correo: this.dialogForm.value.email,
+      telefono: this.dialogForm.value.whatsapp,
+      detalles: '-',
+    });
   }
 
   mostrarSnackBar(mensaje: string, boton: string) {
