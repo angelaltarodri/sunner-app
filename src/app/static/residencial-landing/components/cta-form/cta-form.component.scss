@@ -124,7 +124,7 @@ a {
       padding: 30px;
       box-sizing: border-box;
       @media (max-width: 2000px) {
-        height: 500px;
+        height: 530px;
       }
       @media (max-width: 800px) {
         flex-direction: column;
@@ -278,6 +278,21 @@ a {
                   }
                 }
 
+                .number-option {
+                  width:100%;
+                  display:flex;
+                  justify-content: center;
+                  margin-top: 10px;
+                  > div {
+                    width:250px;
+                    color: white;
+                    background-color: green;
+                    text-align: center;
+                    @media (max-width: 560px) {
+                      font-size: 13px;
+                    }
+                  }
+                }
               }
             }
             button[type="submit"] {

@@ -14,27 +14,27 @@ import { EmailJSService } from 'src/services/email-js.service';
   styleUrls: ['./cta-form.component.scss'],
 })
 export class CtaFormComponent {
-  number: number = 2818;
+  number: number = 2018.70;
   optionsPagoActual: { text: string;  amount: number}[] = [
     {
       text: "No tengo luz",
-      amount: 3000
+      amount: 3000.70
     },
     {
-      text: "Menos de 300 soles",
-      amount: 2018
+      text: "Menos de 900 soles",
+      amount: 2018.70
     },
     {
-      text: "300 a 650 soles",
-      amount: 2818
+      text: "900 a 1300 soles",
+      amount: 2818.70
     },
     {
-      text: "650 a 1000 soles",
-      amount: 3618
+      text: "1300 a 1500 soles",
+      amount: 3618.70
     },
     {
-      text: "Más de 1000 soles",
-      amount: 4418
+      text: "1500 a 2000 soles",
+      amount: 4418.70
     },
   ]
 
@@ -48,7 +48,7 @@ export class CtaFormComponent {
       ],
     ],
     whatsapp: ['', [Validators.required, Validators.minLength(9)]],
-    pagoActual: ['300 a 650 soles', [Validators.required]]
+    pagoActual: ['Menos de 900 soles', [Validators.required]]
   });
 
   constructor(
