@@ -107,6 +107,7 @@ export class FaqFormComponent {
       correo: this.dialogForm.value.email,
       telefono: this.dialogForm.value.whatsapp,
       detalles: '-',
+      pagoActual: '-'
     });
   }
 

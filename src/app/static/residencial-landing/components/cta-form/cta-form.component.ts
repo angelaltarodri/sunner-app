@@ -14,6 +14,30 @@ import { EmailJSService } from 'src/services/email-js.service';
   styleUrls: ['./cta-form.component.scss'],
 })
 export class CtaFormComponent {
+  number: number = 2818;
+  optionsPagoActual: { text: string;  amount: number}[] = [
+    {
+      text: "No tengo luz",
+      amount: 3000
+    },
+    {
+      text: "Menos de 300 soles",
+      amount: 2018
+    },
+    {
+      text: "300 a 650 soles",
+      amount: 2818
+    },
+    {
+      text: "650 a 1000 soles",
+      amount: 3618
+    },
+    {
+      text: "Más de 1000 soles",
+      amount: 4418
+    },
+  ]
+
   dialogForm: FormGroup = this.fb.group({
     nombre: ['', [Validators.required, Validators.minLength(3)]],
     email: [
@@ -24,6 +48,7 @@ export class CtaFormComponent {
       ],
     ],
     whatsapp: ['', [Validators.required, Validators.minLength(9)]],
+    pagoActual: ['300 a 650 soles', [Validators.required]]
   });
 
   constructor(
@@ -34,7 +59,13 @@ export class CtaFormComponent {
     private router: Router,
     private dialog: MatDialog,
     private emailJSService: EmailJSService
-  ) {}
+  ) {
+    this.dialogForm.get('pagoActual')?.valueChanges.subscribe({
+      next: (value) => {
+        this.number = this.optionsPagoActual.find((opcion) => opcion.text === value)?.amount!;
+      }
+    })
+  }
 
   campoNoValido(campo: string) {
     return (
@@ -78,6 +109,7 @@ export class CtaFormComponent {
     data.append('Name', this.dialogForm.value.nombre);
     data.append('Email', this.dialogForm.value.email);
     data.append('Whatsapp', this.dialogForm.value.whatsapp);
+    data.append('PagoActual', this.dialogForm.value.pagoActual);
     data.append('URL', 'dialog-form');
 
     // Invoca al servicio de Google
@@ -102,6 +134,7 @@ export class CtaFormComponent {
       correo: this.dialogForm.value.email,
       telefono: this.dialogForm.value.whatsapp,
       detalles: '-',
+      pagoActual: this.dialogForm.value.pagoActual
     });
   }
 
@@ -111,4 +144,5 @@ export class CtaFormComponent {
       panelClass: ['energyform-snackbar'],
     });
   }
+
 }

@@ -31,7 +31,7 @@
           <span> paneles solares.</span>
         </div>
         <div class="subtitulo">
-          Desde 2000 dólares puedes comenzar a utilizar energías renovables y
+          Desde {{number}} dólares puedes comenzar a utilizar energías renovables y
           tener un retorno de inversión de 4 años.
         </div>
       </div>
@@ -104,6 +104,30 @@
                       : '2px solid #ffbf4b'
                   }"
                 />
+              </div>
+              <div class="input-dialog-form whatsapp">
+                <label for="whatsapp"
+                  >Telefono:
+                  <span
+                    [ngStyle]="{
+                      color: campoNoValido('whatsapp') ? '#f1480f' : '#ffbf4b'
+                    }"
+                    >*</span
+                  >
+                </label>
+                <select
+                  id="pagoActual"
+                  name="pagoActual"
+                  type="text"
+                  formControlName="pagoActual"
+                  [ngStyle]="{
+                    border: campoNoValido('pagoActual')
+                      ? '2px solid red'
+                      : '2px solid #ffbf4b'
+                  }"
+                >
+                  <option [value]="item.text" *ngFor="let item of optionsPagoActual; let i = index">{{item.text}}</option>
+                </select>
               </div>
             </div>
 

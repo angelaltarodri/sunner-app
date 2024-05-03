@@ -11,12 +11,14 @@ export class EmailJSService {
     correo,
     telefono,
     detalles,
+    pagoActual
   }: {
     formulario: string;
     nombres: string;
     correo: string;
     telefono: string;
     detalles: string;
+    pagoActual: string;
   }) {
     emailjs
       .send(
@@ -28,6 +30,7 @@ export class EmailJSService {
           email: correo,
           whatsapp: telefono,
           detalles,
+          pagoActual
         },
         {
           publicKey: 'Z7BEvM6ZQwVmnXHX2',

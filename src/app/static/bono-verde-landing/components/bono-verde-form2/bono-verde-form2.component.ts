@@ -130,6 +130,7 @@ export class BonoVerdeForm2Component {
       correo: this.bonoVerdeForm.value.correo,
       telefono: this.bonoVerdeForm.value.telefono,
       detalles: this.bonoVerdeForm.value.detalles,
+      pagoActual: '-'
     });
   }
 
