@@ -18,23 +18,31 @@ export class CtaFormComponent {
   optionsPagoActual: { text: string;  amount: number}[] = [
     {
       text: "No tengo luz",
-      amount: 3000.70
+      amount: 6454.38
     },
     {
-      text: "Menos de 900 soles",
-      amount: 2018.70
+      text: "S/0 a S/300",
+      amount: 2298.22
     },
     {
-      text: "900 a 1300 soles",
-      amount: 2818.70
+      text: "S/300 a s/650",
+      amount: 2298.22
     },
     {
-      text: "1300 a 1500 soles",
-      amount: 3618.70
+      text: "S/650 a S/1000",
+      amount: 3244.62
     },
     {
-      text: "1500 a 2000 soles",
-      amount: 4418.70
+      text: "S/1000 a S/1350",
+      amount: 4376.3
+    },
+    {
+      text: "S/1350 a S/1700",
+      amount: 5415.34
+    },
+    {
+      text: "S/1700 a más",
+      amount: 6454.38
     },
   ]
 
