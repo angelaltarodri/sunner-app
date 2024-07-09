@@ -14,33 +14,41 @@ import { EmailJSService } from 'src/services/email-js.service';
   styleUrls: ['./cta-form.component.scss'],
 })
 export class CtaFormComponent {
+  idSelected: number = 10;
   number: number = 2018.70;
-  optionsPagoActual: { text: string;  amount: number}[] = [
+  optionsPagoActual: { id: number; text: string;  amount: number}[] = [
     {
+      id: 1,
       text: "No tengo luz",
       amount: 6454.38
     },
     {
+      id: 2,
       text: "S/0 a S/300",
       amount: 2298.22
     },
     {
+      id: 3,
       text: "S/300 a s/650",
       amount: 2298.22
     },
     {
+      id: 4,
       text: "S/650 a S/1000",
       amount: 3244.62
     },
     {
+      id: 5,
       text: "S/1000 a S/1350",
       amount: 4376.3
     },
     {
+      id: 6,
       text: "S/1350 a S/1700",
       amount: 5415.34
     },
     {
+      id: 7,
       text: "S/1700 a más",
       amount: 6454.38
     },
@@ -56,7 +64,7 @@ export class CtaFormComponent {
       ],
     ],
     whatsapp: ['', [Validators.required, Validators.minLength(9)]],
-    pagoActual: ['Menos de 900 soles', [Validators.required]]
+    pagoActual: ['S/300 a s/650', [Validators.required]]
   });
 
   constructor(
@@ -71,6 +79,7 @@ export class CtaFormComponent {
     this.dialogForm.get('pagoActual')?.valueChanges.subscribe({
       next: (value) => {
         this.number = this.optionsPagoActual.find((opcion) => opcion.text === value)?.amount!;
+        this.idSelected = this.optionsPagoActual.find((opcion) => opcion.text === value)?.id!;
       }
     })
   }

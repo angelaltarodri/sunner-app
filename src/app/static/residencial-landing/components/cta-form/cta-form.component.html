@@ -37,7 +37,11 @@
       </div>
       <div class="formulario">
         <div class="form-dialog-container">
-          <form [formGroup]="dialogForm" (ngSubmit)="submitDialogForm()">
+          <form
+            [formGroup]="dialogForm"
+            (ngSubmit)="submitDialogForm()"
+            (keydown.enter)="$event.preventDefault()"
+          >
             <div class="form">
               <div class="input-dialog-form nombre">
                 <label for="nombre"
@@ -129,12 +133,23 @@
                   <option [value]="item.text" *ngFor="let item of optionsPagoActual; let i = index">{{item.text}}</option>
                 </select>
                 <div class="number-option">
-                  <div>{{number}} USD aprox. cotizado</div>
+                  <div *ngIf="
+                  !(idSelected === 1 || idSelected === 2)
+                  ">{{number}} USD aprox. cotizado</div>
+                  <div *ngIf="
+                  idSelected === 1 || idSelected === 2
+                  ">Por ahora no tenemos un producto para tu necesidad.</div>
                 </div>
               </div>
             </div>
 
-            <button type="submit" [disabled]="dialogForm.pending">
+            <button type="submit"
+              [disabled]="dialogForm.pending || (idSelected === 1 || idSelected === 2)"
+              [ngStyle]="{'margin-top': (idSelected === 1 || idSelected === 2)
+                ? '10px'
+                : '20px'
+              }"
+              >
               COTIZA TU PROYECTO
             </button>
           </form>
