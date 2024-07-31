@@ -14,6 +14,46 @@ import { EmailJSService } from 'src/services/email-js.service';
   styleUrls: ['./faq-form.component.scss'],
 })
 export class FaqFormComponent {
+  idSelected: number = 10;
+  number: number = 2018.70;
+  optionsPagoActual: { id: number; text: string;  amount: number}[] = [
+    {
+      id: 1,
+      text: "No tengo luz",
+      amount: 6454.38
+    },
+    {
+      id: 2,
+      text: "S/0 a S/300",
+      amount: 2298.22
+    },
+    {
+      id: 3,
+      text: "S/300 a s/650",
+      amount: 2298.22
+    },
+    {
+      id: 4,
+      text: "S/650 a S/1000",
+      amount: 3244.62
+    },
+    {
+      id: 5,
+      text: "S/1000 a S/1350",
+      amount: 4376.3
+    },
+    {
+      id: 6,
+      text: "S/1350 a S/1700",
+      amount: 5415.34
+    },
+    {
+      id: 7,
+      text: "S/1700 a más",
+      amount: 6454.38
+    },
+  ]
+
   isCheckedMap: { [key: string]: boolean } = {};
 
   closeRadio(event: any, id: string) {
@@ -30,6 +70,7 @@ export class FaqFormComponent {
       ],
     ],
     whatsapp: ['', [Validators.required, Validators.minLength(9)]],
+    pagoActual: ['S/300 a s/650', [Validators.required]]
   });
 
   constructor(
@@ -40,7 +81,14 @@ export class FaqFormComponent {
     private router: Router,
     private dialog: MatDialog,
     private emailJSService: EmailJSService
-  ) {}
+  ) {
+    this.dialogForm.get('pagoActual')?.valueChanges.subscribe({
+      next: (value) => {
+        this.number = this.optionsPagoActual.find((opcion) => opcion.text === value)?.amount!;
+        this.idSelected = this.optionsPagoActual.find((opcion) => opcion.text === value)?.id!;
+      }
+    })
+  }
 
   campoNoValido(campo: string) {
     return (
@@ -84,6 +132,7 @@ export class FaqFormComponent {
     data.append('Name', this.dialogForm.value.nombre);
     data.append('Email', this.dialogForm.value.email);
     data.append('Whatsapp', this.dialogForm.value.whatsapp);
+    data.append('PagoActual', this.dialogForm.value.pagoActual);
     data.append('URL', 'dialog-form');
 
     // Invoca al servicio de Google
@@ -107,7 +156,7 @@ export class FaqFormComponent {
       correo: this.dialogForm.value.email,
       telefono: this.dialogForm.value.whatsapp,
       detalles: '-',
-      pagoActual: '-'
+      pagoActual: this.dialogForm.value.pagoActual
     });
   }
 

@@ -228,6 +228,38 @@
                 }"
               />
             </div>
+            <div class="input-dialog-form whatsapp">
+              <label for="whatsapp"
+                >Pago de luz actual:
+                <span
+                  [ngStyle]="{
+                    color: campoNoValido('whatsapp') ? '#f1480f' : '#ffbf4b'
+                  }"
+                  >*</span
+                >
+              </label>
+              <select
+                id="pagoActual"
+                name="pagoActual"
+                type="text"
+                formControlName="pagoActual"
+                [ngStyle]="{
+                  border: campoNoValido('pagoActual')
+                    ? '2px solid red'
+                    : '2px solid #ffbf4b'
+                }"
+              >
+                <option [value]="item.text" *ngFor="let item of optionsPagoActual; let i = index">{{item.text}}</option>
+              </select>
+              <div class="number-option">
+                <div *ngIf="
+                !(idSelected === 1 || idSelected === 2)
+                ">{{number}} USD aprox. cotizado</div>
+                <div *ngIf="
+                idSelected === 1 || idSelected === 2
+                ">Por ahora no tenemos un producto para tu necesidad.</div>
+              </div>
+            </div>
           </div>
 
           <button type="submit" [disabled]="dialogForm.pending">
