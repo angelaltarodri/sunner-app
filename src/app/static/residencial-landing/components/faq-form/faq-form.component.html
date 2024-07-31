@@ -262,7 +262,8 @@
             </div>
           </div>
 
-          <button type="submit" [disabled]="dialogForm.pending">
+          <button type="submit"
+            [disabled]="dialogForm.pending || (idSelected === 1 || idSelected === 2)">
             COTIZA TU PROYECTO
           </button>
         </form>
