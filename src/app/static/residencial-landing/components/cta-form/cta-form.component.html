@@ -134,18 +134,18 @@
                 </select>
                 <div class="number-option">
                   <div *ngIf="
-                  !(idSelected === 1 || idSelected === 2)
+                  !(idSelected === 2)
                   ">{{number}} USD aprox. cotizado</div>
                   <div *ngIf="
-                  idSelected === 1 || idSelected === 2
+                    idSelected === 2
                   ">Por ahora no tenemos un producto para tu necesidad.</div>
                 </div>
               </div>
             </div>
 
             <button type="submit"
-              [disabled]="dialogForm.pending || (idSelected === 1 || idSelected === 2)"
-              [ngStyle]="{'margin-top': (idSelected === 1 || idSelected === 2)
+              [disabled]="dialogForm.pending || (idSelected === 2)"
+              [ngStyle]="{'margin-top': (idSelected === 2)
                 ? '10px'
                 : '20px'
               }"
